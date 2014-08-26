@@ -1,3 +1,10 @@
+.container {
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
 .page{
   width:100%;
   margin: 50px auto 20px;
@@ -32,9 +39,14 @@
   border-radius: 50px;
 }
 
-.container {
-  margin-right: 0px;
-  margin-left: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
+.conversation{
+  background-color: #eee;
+}
+
+.question{
+  background-color: #E99;
+}
+
+.answer{
+  background-color: #9e9;
 }
