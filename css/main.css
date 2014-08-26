@@ -22,12 +22,19 @@
 }
 
 .regist-face{
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   margin: 0px auto;
   background-image: url("https://avatars0.githubusercontent.com/u/3541156?v=2&s=460");
   background-size: cover;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
+}
+
+.container {
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
