@@ -1,3 +1,15 @@
+<?php
+
+require_once './mvc/Dispatcher.php';
+
+$dispatcher = new Dispatcher();
+
+$dispatcher->setSystemRoot('/index.php');
+$controller=$dispatcher->dispatch();
+$controller->helloAction();
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>

@@ -4,6 +4,7 @@ CREATE TABLE users (
   first_name varchar(10),
   sex tinyint,
   mail varchar(100),
+  photo varchar(255),
   created_at datetime,
   modified_at datetime
 );
