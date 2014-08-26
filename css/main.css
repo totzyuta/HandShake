@@ -50,11 +50,16 @@ body {
 
 .target-face{
   height: 80px;
-  width: 100%;
+  /* width: 100%; */
   float: right;
 }
 
 .lover-face{
+  height: 80px;
+  /* width: 100%; */
+  float: left;
+  position: relative;
+  top: -80px;
 }
 
 .target{
