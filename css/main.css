@@ -5,9 +5,29 @@
 }
 
 .hero{
-  height: 200px;
-  padding: 60px;
-  background-image: url("https://www.vagrantup.com/images/vagrant_header_background-482a12a7.png");
+  padding: 5px 60px;
   text-align: center;
   border-bottom: 1px solid #ccc;
+}
+
+.hero-top{
+  height: 200px;
+  background-image: url("http://www.fukei-kabegami.com/cgi-bin/photo2/335/4839/1024-768.jpg");
+  background-size: cover;
+}
+
+.regist{
+  background-color: #ef932e;
+  height: 200px;
+}
+
+.regist-face{
+  height: 100px;
+  width: 100px;
+  margin: 0px auto;
+  background-image: url("https://avatars0.githubusercontent.com/u/3541156?v=2&s=460");
+  background-size: cover;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
 }
