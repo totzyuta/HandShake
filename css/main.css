@@ -1,15 +1,6 @@
 body {
 }
 
-/*
-.container {
-  margin-right: 0px;
-  margin-left: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-*/
-
 .page{
   width:100%;
   margin: 50px auto 20px;
@@ -42,6 +33,25 @@ body {
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
+}
+
+.mypage{
+  height: 400px;
+}
+
+.myface{
+  height:80px;
+  width: 80px;
+}
+
+.target{
+  height: 200px;
+  background-color: #ef932e;
+}
+
+.lover{
+  height: 200px;
+  background-color: #000;
 }
 
 .conversation{
