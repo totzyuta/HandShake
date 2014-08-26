@@ -40,18 +40,35 @@ body {
 }
 
 .myface{
-  height:80px;
-  width: 80px;
+  height: 80px;
+  width: 100%;
+  float: left;
+  margin: 0px auto;
+  position: relative;
+  top: -40px;
+}
+
+.target-face{
+  height: 80px;
+  width: 100%;
+  float: right;
+}
+
+.lover-face{
 }
 
 .target{
   height: 200px;
+  width: 100%;
   background-color: #ef932e;
+  display: block;
 }
 
 .lover{
   height: 200px;
-  background-color: #000;
+  width: 100%;
+  background-color: #eee;
+  display: block;
 }
 
 .conversation{
