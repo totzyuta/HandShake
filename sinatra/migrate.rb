@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'mysql'
 
-$db = Mysql::connect('localhost', ENV['DB_HANDSHAKE'] , ENV['DB_HANDSHAKE_PASS'],'handshake')
+db = Mysql::connect('localhost', ENV['DB_HANDSHAKE'] , ENV['DB_HANDSHAKE_PASS'],'handshake')
 
 #SQL
 db.query 'use handshake'
