@@ -475,4 +475,26 @@ body {
   background-color: #9e9;
 }
 
+.love {
+  height: 130px;
+  background-color: #ddd;
+  display: block;
+}
 
+.love-target-face {
+  width: 200px;
+  margin: 0px auto;
+}
+
+.love .face-out-circle {
+  height: 130px;
+  width: 130px;
+  margin: 0px auto;
+  -moz-border-radius: 130;
+  -webkit-border-radius: 130px;
+  border-radius: 130;
+  border: 2px solid #ecb47b;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}

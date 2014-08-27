@@ -36,7 +36,7 @@ end
 
 #Select Page
 get '/select' do
-  session['uid']
+  @target_img = userget(session['uid'])[4]
   erb :select
 end
 
