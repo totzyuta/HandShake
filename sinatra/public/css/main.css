@@ -22,6 +22,10 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
+/*
+ * Top Page
+ */
+
 .hero-top{
   height: 200px;
   background-image: url("http://www.fukei-kabegami.com/cgi-bin/photo2/335/4839/1024-768.jpg");
@@ -96,20 +100,56 @@ body {
   border-top: 6px solid white;
 }
 
-.regist{
+
+/*
+ * Registering Page
+ */
+
+.firstContents {
   background-color: #ef932e;
-  height: 200px;
 }
 
-.regist-face{
-  height: 80px;
-  width: 80px;
+.image {
+  display: table;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.face-out-circle {
+    height: 130px;
+    width: 130px;
+    margin: 0px auto;
+    -moz-border-radius: 130;
+    -webkit-border-radius: 130px;
+    border-radius: 130;
+    border: 2px solid #ecb47b;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.firstContents img {
+  height: 100px;
+  width: 100px;
   margin: 0px auto;
-  background-image: url("https://avatars0.githubusercontent.com/u/3541156?v=2&s=460");
   background-size: cover;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
+}
+
+.forms {
+  margin-bottom: 15px;
+}
+
+.firstContents input {
+  margin-bottom: 6px;
+}
+
+.secondContents h3 {
+  margin-top: 50px;
 }
 
 .conversation{
