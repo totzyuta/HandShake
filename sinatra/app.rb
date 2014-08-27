@@ -20,7 +20,8 @@ get '/regist' do
 end
 
 #My Page
-get '/mypage' do
+get '/mypage/:uid' do
+
   erb :mypage
 end
 
