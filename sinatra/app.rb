@@ -1,12 +1,11 @@
 # encoding: utf-8
 require 'sinatra'
-require 'slim'
 require 'mysql'
 # require 'omniauth'
 # require 'omniauth-twitter'
 require 'cgi'
 require 'digest/md5'
-# load 'database.rb'
+load 'db.rb'
 
 #set :port, 80
 
