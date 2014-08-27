@@ -5,7 +5,7 @@ require 'mysql'
 # require 'omniauth-twitter'
 require 'cgi'
 require 'digest/md5'
-# load 'db.rb'
+load 'db.rb'
 
 #set :port, 80
 
@@ -20,7 +20,8 @@ get '/regist' do
 end
 
 #My Page
-get '/mypage' do
+get '/mypage/:uid' do
+
   erb :mypage
 end
 
@@ -45,7 +46,10 @@ end
 
 #Regist
 post '/useradd' do
-
+  p params[:Name]
+  p params[:Email]
+  #useradd(params[:Name],1,params[:Email],'')
+  redirect '/mypage'
 end
 
 #I love You
