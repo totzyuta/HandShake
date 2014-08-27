@@ -19,15 +19,14 @@ DBconsole('show tables')
 
 #model
 def useradd(name, sex, mail, photo)
-  sql = 'insert into users values(
-    NULL ,"' +
-    name + '",' +
-    sex.to_s + ',"' +
-    mail + '","' +
-    photo + '",
-    "",
-    "")'
+  rs = $db.query "select count(*) from users"
+  id = ''
+  rs.each{|col|
+    id = (col[0].to_i+1).to_s
+  }
+  sql = 'insert into users values(' + id + ' ,"' + name + '",' + sex.to_s + ',"' + mail + '","' + photo + '","","")'
   $db.query sql
+  return id
 end
 
 def userget(id)

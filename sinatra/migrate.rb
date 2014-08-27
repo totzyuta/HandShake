@@ -50,10 +50,10 @@ db.query 'create table conversations (
   answer_at datetime)'
 
 #test data
-useradd('TANAKA',1,'example@mail.com','');
-useradd('SATOU',1,'example@mail.com','');
-useradd('SUZUKI',0,'example@mail.com','');
-useradd('MIYANAGA',0,'example@mail.com','');
+p useradd('TANAKA',1,'example@mail.com','')
+p useradd('SATOU',1,'example@mail.com','')
+p seradd('SUZUKI',0,'example@mail.com','')
+p useradd('MIYANAGA',0,'example@mail.com','')
 
 friendadd(1,2)
 friendadd(1,3)
