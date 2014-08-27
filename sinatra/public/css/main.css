@@ -152,6 +152,47 @@ body {
   margin-top: 50px;
 }
 
+.mypage{
+  height: 400px;
+}
+
+.myface{
+  height: 80px;
+  width: 100%;
+  float: left;
+  margin: 0px auto;
+  position: relative;
+  top: -40px;
+}
+
+.target-face{
+  height: 80px;
+  /* width: 100%; */
+  float: right;
+}
+
+.lover-face{
+  height: 80px;
+  /* width: 100%; */
+  float: left;
+  position: relative;
+  top: -80px;
+}
+
+.target{
+  height: 200px;
+  width: 100%;
+  background-color: #ef932e;
+  display: block;
+}
+
+.lover{
+  height: 200px;
+  width: 100%;
+  background-color: #eee;
+  display: block;
+}
+
 .conversation{
   background-color: #eee;
 }
