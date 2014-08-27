@@ -22,6 +22,15 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
+.contents {
+  height: 100%;
+}
+
+.firstContents {
+  background-color: #ef932e;
+  height: 220px;
+}
+
 /*
  * Top Page
  */
@@ -104,10 +113,6 @@ body {
 /*
  * Registering Page
  */
-
-.firstContents {
-  background-color: #ef932e;
-}
 
 .registeringPage .image {
   display: table;
@@ -196,9 +201,8 @@ body {
  * Mypage
  */
 
-.firstContents {
-  background-color: #ef932e;
-  height: 270px;
+.myPage {
+  height: 100%
 }
 
 .myPage .lines {
@@ -214,6 +218,7 @@ body {
 }
 
 .myPage p {
+  margin-top: 50px;
   font-size: 30px;
   color: #eee;
 }
@@ -394,7 +399,7 @@ body {
 .myPage .middleContents .image {
   display: table;
   position: absolute;
-  top: 260px;
+  top: 210px;
   left: 97px;
 }
 
