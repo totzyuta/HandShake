@@ -163,7 +163,7 @@ body {
   margin-top: 45px;
   display: table;
   border-collapse: separate;
-  border-spacing: 15px 0;  
+  border-spacing: 15px 0;
 }
 
 .registeringPage .button {
@@ -294,7 +294,7 @@ body {
   top: 225px;
   left: 51px;
 }
-  
+
 .myPage .circle3 {
   height: 30px;
   width: 30px;
@@ -474,3 +474,5 @@ body {
 .answer{
   background-color: #9e9;
 }
+
+

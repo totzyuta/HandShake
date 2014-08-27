@@ -5,7 +5,7 @@ require 'mysql'
 # require 'omniauth-twitter'
 require 'cgi'
 require 'digest/md5'
-#load 'db.rb'
+load 'db.rb'
 
 #manage session
 set :sessions, true
@@ -35,8 +35,8 @@ get '/mypage' do
 end
 
 #Select Page
-get '/select/:uid' do
-
+get '/select' do
+  session['uid']
   erb :select
 end
 
