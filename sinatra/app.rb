@@ -58,7 +58,7 @@ end
 post '/useradd' do
   p params[:Name]
   p params[:Email]
-  #session['uid'] = useradd(params[:Name],1,params[:Email],'')
+  session['uid'] = rand(4)
   redirect "/mypage"
 end
 

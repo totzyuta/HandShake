@@ -1,6 +1,5 @@
 <section class="registeringPage">
 <div class="firstContents">
-  <div class="page">
     <section class="hero regist">
     <div class="image">
       <div class="face-out-circle">
@@ -11,10 +10,12 @@
     <form action="/useradd" method="post">
       <input type="name" class="form-control" id="Name" placeholder="Name" value="<%= @regist_name %>">
       <input type="email" class="form-control" id="Email" placeholder="Email" value="<%= @regist_email %>">
+      <input type="name" class="form-control" id="Name" placeholder="Name">
+      <input type="email" class="form-control" id="Email" placeholder="Email">
+      <input type="submit">
     </form>
     </div>
     </section>
-  </div>
 </div>
 
 <div class="secondContents">
