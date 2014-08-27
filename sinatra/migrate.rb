@@ -1,5 +1,6 @@
 # encoding: utf-8
 require 'mysql'
+load 'db.rb'
 
 db = Mysql::connect('localhost', ENV['DB_HANDSHAKE'] , ENV['DB_HANDSHAKE_PASS'],'handshake')
 
@@ -31,7 +32,7 @@ db.query 'create table approaches (
   approached_at datetime)'
 
 db.query 'create table questions (
-  question_id int not null quto_increment primary key,
+  question_id int not null auto_increment primary key,
   body text)'
 
 db.query 'create table conversations (
