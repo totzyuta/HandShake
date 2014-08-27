@@ -1,15 +1,6 @@
 body {
 }
 
-/*
-.container {
-  margin-right: 0px;
-  margin-left: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-*/
-
 .page{
   width:100%;
   margin: 50px auto 20px;
@@ -42,6 +33,61 @@ body {
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
+  border: 3px solid #eca052;
+}
+
+.face-out-circle {
+  height: 100px;
+  width: 100px;
+  margin: 0px auto;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 2px solid #ecb47b;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mypage{
+  height: 400px;
+}
+
+.myface{
+  height: 80px;
+  width: 100%;
+  float: left;
+  margin: 0px auto;
+  position: relative;
+  top: -40px;
+}
+
+.target-face{
+  height: 80px;
+  /* width: 100%; */
+  float: right;
+}
+
+.lover-face{
+  height: 80px;
+  /* width: 100%; */
+  float: left;
+  position: relative;
+  top: -80px;
+}
+
+.target{
+  height: 200px;
+  width: 100%;
+  background-color: #ef932e;
+  display: block;
+}
+
+.lover{
+  height: 200px;
+  width: 100%;
+  background-color: #eee;
+  display: block;
 }
 
 .conversation{
