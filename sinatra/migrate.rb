@@ -49,30 +49,34 @@ db.query 'create table conversations (
   answer varchar(20),
   answer_at datetime)'
 
-#test data
-useradd('TANAKA',1,'example@mail.com','');
-useradd('SATOU',1,'example@mail.com','');
-useradd('SUZUKI',0,'example@mail.com','');
-useradd('MIYANAGA',0,'example@mail.com','');
-
-friendadd(1,2)
-friendadd(1,3)
-friendadd(1,4)
-friendadd(2,3)
-friendadd(2,4)
-friendadd(3,4)
-friendadd(4,2)
-friendadd(4,3)
+#test user data
+names = %w(Satou Suzuki Tanaka Yamada Takahashi Itou Yamamoto Watanabe Nakamura Kobayashi Kato)
+n = 1
+names.each do |name|
+  image_url = 'http://www.anime-chu-2.com/tv/special/twitter_icon/OP'+ ("%02d" % n) +'.jpg'
+  p useradd(name,n%2,'example@mail.com',image_url)
+  n = n + 1
+end
 
 p userget(3)
+
+#test friends network
+10.times do |i|
+  10.times do |j|
+    if rand(2) == 1
+      friendadd(i,j)
+    end
+  end
+end
 
 friendget(1).each do |i|
   p i
 end
 
-iloveyou(1,3,"","","")
-p gettarget(1)
-p getlover(3)
+#
+#iloveyou(1,3,"","","")
+#p gettarget(1)
+#p getlover(3)
 
 #Questions
 questionadd("好きな食べ物は？")
