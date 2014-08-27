@@ -7,7 +7,6 @@ require 'cgi'
 require 'digest/md5'
 # load 'db.rb'
 
-
 #set :port, 80
 
 #Top Page
@@ -49,6 +48,11 @@ post '/useradd' do
 
 end
 
+#I love You
+post '/iloveyou' do
+
+end
+
 #Question
 post '/question' do
 
@@ -58,3 +62,4 @@ end
 post '/answer' do
 
 end
+
