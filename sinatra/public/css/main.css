@@ -42,7 +42,7 @@ body {
   text-align: right;
 }
 
-.button {
+.topPage .button {
   color: #ef932e;
   font-size: 20px;
   padding-top: 13px;
@@ -151,6 +151,46 @@ body {
 .secondContents h3 {
   margin-top: 50px;
 }
+
+.secondContents .buttons {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 15px 0;  
+}
+
+.registeringPage .button {
+  color: #ef932e;
+  font-size: 18px;
+  width: 160px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: solid;
+  border-width: 1px;
+  border-color: #ef932e;
+  border-radius 15px;
+  /* for chrome, safari */
+  -webkit-border-radius: 15px;
+  display: table-cell;
+}
+
+.registeringPage .button2 {
+  color: white;
+  font-size: 18px;
+  width: 90px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: solid;
+  border-width: 1px;
+  background-color: #ef932e;
+  border-radius 15px;
+  /* for chrome, safari */
+  -webkit-border-radius: 15px;
+  display: table-cell;
+}
+
 
 .conversation{
   background-color: #eee;
