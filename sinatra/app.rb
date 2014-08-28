@@ -57,6 +57,10 @@ get '/mypage' do
       i = i + 15;
       i = i + 15 if conv[4] != nil
     end
+
+    #最終告白が終わっているか
+    i = i + 5 if target[7] == 2.to_s
+
     @target_progress = i.to_s + '%'
   rescue
     #告白してない
@@ -77,6 +81,10 @@ get '/mypage' do
       i = i + 15;
       i = i + 15 if conv[4] != nil
     end
+
+    #最終告白が終わっているか
+    i = i + 5 if lover[7] == 2.to_s
+
     @lover_progress = i.to_s + '%'
   rescue
     #告白されてない
