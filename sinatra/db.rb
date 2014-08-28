@@ -69,12 +69,13 @@ def iloveyou(my_id, target_id, handle, point, manifest)
   $db.query sql
 end
 
-#approch_idを照会する
+#approch_id を照会する
 #def approchget(lover_id, target_id)
 #  sql = 'select * from approaches where'
 #end
 
-#my_idが告白してる人
+#my_id が告白してる人
+#approachesから返す
 def gettarget(my_id)
   sql = 'select * from approaches where user_id = "' + my_id.to_s + '"'
   rs = $db.query sql
@@ -84,6 +85,7 @@ def gettarget(my_id)
 end
 
 #my_id に告白してる人
+#approachesから返す
 def getlover(my_id)
   sql = 'select * from approaches where target_id = "' + my_id.to_s + '"'
   rs = $db.query sql

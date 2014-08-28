@@ -42,12 +42,20 @@ get '/mypage' do
   begin
     #告白してる
     @target_img = userget(target[2])[4]
+    #進捗計算
+    conversations = conversationget(target[0])
+    i = 0;
+    conversations.each do |conv|
+      i = i + 15;
+      i = i + 15 if conv[4] != nil
+    end
+    @target_progress = i.to_s
   rescue
     #告白してない
     @target_img = ""
   end
 
-  #進捗計算
+  @progress
 
   #残り計算
 
@@ -56,12 +64,19 @@ get '/mypage' do
   begin
     #告白されてる
     @lover_img = userget(lover[1])[4]
+    #進捗計算
+    conversations = conversationget(lover[0])
+    i = 0;
+    conversations.each do |conv|
+      i = i + 15;
+      i = i + 15 if conv[4] != nil
+    end
+    @lover_progress = i.to_s
   rescue
     #告白されてない
     @lover_img = ""
   end
 
-  #進捗計算
 
   #残り計算
 
