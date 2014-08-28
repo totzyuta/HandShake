@@ -45,6 +45,10 @@ get '/mypage' do
     @target_img = ""
   end
 
+  #進捗計算
+
+  #残り計算
+
   #告白されている方
   lover = getlover(user[0])
   begin
@@ -52,6 +56,11 @@ get '/mypage' do
   rescue
     @lover_img = ""
   end
+
+  #進捗計算
+
+  #残り計算
+
   erb :mypage
 end
 
@@ -66,7 +75,10 @@ end
 
 #IloveYou Page
 get '/love' do
-  @target_img = userget(params['target'])[4]
+  target = userget(params['target'])
+  @target_img = target[4]
+  @target_name = target[1]
+  @target_email = target[3]
   @my_id = session['uid']
   @target_id = params['target']
   erb :love
