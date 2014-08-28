@@ -1,9 +1,9 @@
-<link href="/css/conversation.css" rel="stylesheet" type="text/css">
+<link href="/css/conversation_to.css" rel="stylesheet" type="text/css">
 <div class="page">
-  <div class="titleBar">
+  <div class="titleBar"> 
+    <div class="line"></div>
     <h3>Questions</h3>
     <p>You&nbsp;<span class="small">&#x25B6;&#x25B6;</span>&nbsp;<%= @target_name %><p>
-    <div class="line"></div>
   </div>
 
   <% @conv_num = 0 %>
@@ -48,12 +48,29 @@
 
   <!-- 質問がまだない場合 -->
   <% if @conv_num == 0 %>
-    <p style="color:black;">反応はまだありません．みたいなやつ</p>
+    <div class="line-out conv-zero">
+      <div class="line-in">
+        <p>
+          まだ質問がありません
+        </p>
+      </div>
+    </div>
+  <% end %>
+
+
+  <% if @conv_num != 0 && @answer == 0 %>
+  <!-- 告白した側：解答フォーム -->
+    <div class="line-out conv-non-zero">
+      <div class="line-in">
+        <p>
+          質問がまだ来ていません
+        </p>
+      </div>
+    </div>
   <% end %>
 
   <!-- 質問がなかったら解答フォームはない -->
   <% if @answer == 1 %>
-
   <!-- 告白した側：解答フォーム -->
   <div class="footer">
     <form action="/answer" method="post">

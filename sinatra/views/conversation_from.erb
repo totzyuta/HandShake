@@ -1,4 +1,4 @@
-<link href="/css/conversation.css" rel="stylesheet" type="text/css">
+<link href="/css/conversation_from.css" rel="stylesheet" type="text/css">
 <div class="page">
   <div class="titleBar">
     <h3>Questions</h3>
@@ -50,7 +50,13 @@
 
   <!-- 質問がまだない場合 -->
   <% if @conv_num == 0 %>
-    <p style="color:black;">ここになにか</p>
+    <div class="line-out">
+      <div class="line-in">
+        <p>
+          質問をしてください
+        </p>
+      </div>
+    </div>
   <% end %>
 
   <!-- 3回質問したら聞かない -->

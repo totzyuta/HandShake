@@ -86,7 +86,6 @@
   height: 50px;
 }
 
-
 .secondContents .lapper {
   display: table-cell;
   margin: 0px;
@@ -112,6 +111,11 @@
   border-radius: 9px;
 }
 
+a.touchstart {
+  background-color: #ef932e;
+  color: white;
+}
+
 .secondContents .button2 {
   display: block;
   color: white;
@@ -130,6 +134,12 @@
    -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
+}
+
+a.touchstart {
+  border-color: #ef932e;
+  color: #ef932e;
+  background-color: white;
 }
 
 .secondContents h3 {

@@ -22,6 +22,11 @@ end
 
 #デバッグ用 session 付ける
 get '/session/:uid' do
+  if params[:uid] == 'rm'
+    session[:uid] = nil
+    redirect '/'
+  end
+
   session[:uid] = params[:uid]
   redirect '/mypage'
 end
@@ -57,6 +62,12 @@ get '/mypage' do
       i = i + 15;
       i = i + 15 if conv[4] != nil
     end
+
+    #最終告白が終わっているか
+    i = i + 5 if target[7] == 2.to_s
+    i = i + 10 if target[7] == 3.to_s
+
+
     @target_progress = i.to_s + '%'
   rescue
     #告白してない
@@ -77,6 +88,11 @@ get '/mypage' do
       i = i + 15;
       i = i + 15 if conv[4] != nil
     end
+
+    #最終告白が終わっているか
+    i = i + 5 if lover[7] == 2.to_s
+    i = i + 10 if lover[7] == 3.to_s
+
     @lover_progress = i.to_s + '%'
   rescue
     #告白されてない
@@ -147,11 +163,32 @@ end
 
 #恋愛度MAX，最後の告白
 get '/lovemax' do
+  my_id = session[:uid]
+  @user = userget(my_id)
+  approach = gettarget(my_id)
+  @target = userget(approach[2])
+  @target_name = @target[1]
+  @target_img = @target[4]
+  @user_name = @user[1]
+  @user_img =@user[4]
+  @approach_id = approach[0]
+
   erb :lovemax
 end
 
 #告白の返事
 get '/return' do
+  my_id = session[:uid]
+  @user = userget(my_id)
+  approach = getlover(my_id)
+  @lover = userget(approach[1])
+  @lover_name = @lover[1]
+  @lover_img = @lover[4]
+  @user_name = @user[1]
+  @user_img =@user[4]
+  @approach_id = approach[0]
+  @approach_main = approach[8]
+
   erb :return
 end
 
@@ -175,6 +212,23 @@ post '/iloveyou' do
   point = @params[:point]
   manifest = @params[:manifest]
   iloveyou(my_id, target_id, handle, point, manifest)
+  redirect '/mypage'
+end
+
+#I love You Final
+post '/iloveyoufinal' do
+  approach_id = @params[:approach_id]
+  main = @params[:main]
+  iloveyoufinal(approach_id, main)
+  redirect '/mypage'
+end
+
+#I love You Result
+post '/iloveyouresult' do
+  approach_id = @params[:approach_id]
+  response = @params[:response]
+  result = (("受ける" == @params[:judge]) ? true : false)
+  loveisok(approach_id, response, result)
   redirect '/mypage'
 end
 

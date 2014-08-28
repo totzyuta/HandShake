@@ -21,19 +21,19 @@
     <div class="image-container float-right">
       <div class="image">
         <div class="face-out-circle">
-          <img src="<%= @target_img %>">
+          <img src="<%= @user_img %>">
         </div>
       </div>
-      <p>Target Name</p>
+      <p><%= @user_name %></p>
     </div>
 
     <div class="image-container float-left">
       <div class="image">
         <div class="face-out-circle">
-          <img src="<%= @target_img %>">
+          <img src="<%= @lover_img %>">
         </div>
       </div>
-      <p>Target Name</p>
+      <p><%= @lover_name %></p>
       <div class="borderCircle circle1"></div>
       <div class="borderCircle circle2"></div>
       <div class="circle circle3"></div>
@@ -42,18 +42,17 @@
     </div>
   </div>
   <div class="secondContents">
-    <form action="/iloveyou" method="post">
+    <form action="/iloveyouresult" method="post">
 
-    <input type="hidden" name="my_id" value="<%= @my_id %>">
-    <input type="hidden" name="target_id" value="<%= @target_id %>">
+    <input type="hidden" name="approach_id" value="<%= @approach_id %>">
 
     <label>
     <p>相手からのメッセージ</p>
     <div class="message">
-      あなたのことがずっと好きでした．放課後に一生懸命部活をしているあなたの姿が忘れられません．僕と付き合ってください．
+      <%= @approach_main.force_encoding('utf-8') %>
     </div>
     </label>
-    
+
     <label>
       <p>告白を受ける場合のメッセージ</p>
       <input type="text" class="form-control" name="response" placeholder="ex ) よろしくお願いします．"/>

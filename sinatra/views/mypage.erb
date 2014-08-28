@@ -18,8 +18,52 @@
     </a>
     <% end%>
 
+    <% if @target_progress == "90%" %>
+    <a href="/lovemax">
+      <div class="cover">
+        <div class="line-out">
+          <div class="line-in">
+            <p>
+              本番告白に望みましょう
+              <div class="triangle to-select1"></div>
+              <div class="triangle to-select2"></div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <% end %>
+
+    <% if @target_progress == "95%" %>
+    <div class="cover">
+      <div class="line-out">
+        <div class="line-in">
+          <p>
+            最後の返事を待っています
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+    <% if @target_progress == "100%" %>
+    <div class="cover">
+      <div class="line-out">
+        <div class="line-in">
+          <p>
+            祝・恋愛成就
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
     <!-- 上画面：告白している -->
-    <p><span class="strong">3</span>Days</p>
+    <p>
+    <% if @target_img != "" %>
+    <span class="strong">3</span>Days
+    <% end %>
+    </p>
     <div class="borderCircle circle1"></div>
     <div class="circle circle2"></div>
     <div class="borderCircle circle3"></div>
@@ -28,6 +72,10 @@
     <div class="borderCircle circle6"></div>
     <div class="borderCircle circle7"></div>
     <div class="circle circle8"></div>
+
+    <!-- アニメーション用 -->
+    <div class="borderCircle circle-anim1 anim-circle"></div>
+
     <div class="image">
       <div class="mask">
         <div class="face-out-circle">
@@ -48,10 +96,7 @@
     <div class="line"></div>
     <div class="strong pct">
     <div class="target_name">
-      <h5>ななしさん
-      <!-- 拾えないtaget_name... 
-      <%= @target_name %>
-      --> </h5>
+      <h5><%= @target_name %></h5>
     </div>
       <p><%= @target_progress %></p>
     </div>
@@ -79,6 +124,46 @@
     </div>
     <% end %>
 
+    <% if @lover_progress == "90%" %>
+    <div class="cover">
+      <div class="line-out">
+        <div class="line-in">
+          <p>
+            本番告白を待っています
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+    <% if @lover_progress == "95%" %>
+    <a href="/return">
+      <div class="cover">
+        <div class="line-out">
+          <div class="line-in">
+            <p>
+              最後の返事をしましょう
+              <div class="triangle to-select1"></div>
+              <div class="triangle to-select2"></div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <% end %>
+
+    <% if @lover_progress == "100%" %>
+      <div class="cover">
+        <div class="line-out">
+          <div class="line-in">
+            <p>
+              カップル成立
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
     <!-- 下画面：告白されている -->
     <div class="strong pct">
       <p><%= @lover_progress %></p>
@@ -98,7 +183,11 @@
             <img src="/images/unknown.png">
           <% else %>
           <a href="/conversation/from">
+            <% if @lover_progress == "100%" %>
+            <img src="<%= @lover_img %>">
+            <% else %>
             <img src="/images/unknown.png">
+            <% end %>
           </a>
           <% end %>
         </div>
@@ -110,3 +199,4 @@
 
   </div>
 </section>
+<script src="/js/mypage.js"></script>

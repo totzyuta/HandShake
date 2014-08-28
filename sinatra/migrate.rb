@@ -35,7 +35,11 @@ db.query 'create table approaches (
   handle varchar(30),
   point varchar(50),
   manifest varchar(50),
-  approached_at datetime)'
+  approached_at datetime,
+  status int,
+  main text,
+  response text)'
+  #status = 0:wait, 1:running, 2:check, 3:success, 4:miss
 
 db.query 'create table questions (
   question_id int not null auto_increment primary key,
