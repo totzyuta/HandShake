@@ -40,8 +40,10 @@ get '/mypage' do
   @my_img = user[4]
   target = gettarget(user[0])
   begin
+    #告白してる
     @target_img = userget(target[2])[4]
   rescue
+    #告白してない
     @target_img = ""
   end
 
@@ -52,8 +54,10 @@ get '/mypage' do
   #告白されている方
   lover = getlover(user[0])
   begin
+    #告白されてる
     @lover_img = userget(lover[1])[4]
   rescue
+    #告白されてない
     @lover_img = ""
   end
 
