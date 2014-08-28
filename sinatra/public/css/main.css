@@ -15,7 +15,8 @@
 */
 
 
-body {
+body{
+
 }
 
 input[type="text"], textarea {
@@ -104,11 +105,13 @@ input[type="text"], textarea {
   border-radius 10px;
   /* for chrome, safari */
   -webkit-border-radius: 10px;
+  text-decoration: none;
 }
 
 .topPage .button:active {
   color: white;
   background-color: #ef932e;
+  text-decoration: none;
 }
 
 
