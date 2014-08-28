@@ -48,7 +48,7 @@
 
   <!-- 質問がまだない場合 -->
   <% if @conv_num == 0 %>
-    <div class="line-out">
+    <div class="line-out conv-zero">
       <div class="line-in">
         <p>
           まだ質問がありません
@@ -57,9 +57,20 @@
     </div>
   <% end %>
 
+
+  <% if @conv_num != 0 && @answer == 0 %>
+  <!-- 告白した側：解答フォーム -->
+    <div class="line-out conv-non-zero">
+      <div class="line-in">
+        <p>
+          質問がまだ来ていません
+        </p>
+      </div>
+    </div>
+  <% end %>
+
   <!-- 質問がなかったら解答フォームはない -->
   <% if @answer == 1 %>
-
   <!-- 告白した側：解答フォーム -->
   <div class="footer">
     <form action="/answer" method="post">
