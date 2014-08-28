@@ -13,8 +13,17 @@
 * フォームタイトル: #9e9498
 */
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 640px;
+  overflow: hidden;
+}
+
 .page{
-  width:100%;
   margin: 50px auto 20px;
   border-top: 1px solid #ccc;
 }
@@ -180,10 +189,10 @@
   height: 0px;
   width: 0px;
   border: 7px solid transparent;
-  border-top: 7px solid #ece0d2;
-  border-left: 7px solid #ece0d2;
+  border-top: 7px solid #ecb47b;
+  border-left: 7px solid #ecb47b;
   position: absolute;
-  top: 138px;
+  top: 136px;
   left: 238px;
 }
 
@@ -195,16 +204,16 @@
   border-left: 7px solid #ef932e;
   z-index: 5;
   position: absolute;
-  top: 137px;
+  top: 135px;
   left: 237px;
 }
 
 .firstContents .line  {
-  border-top: 1px solid #ece0d2;
+  border-top: 1px solid #ecb47b;
   height: 0px;
   width: 75px;
   position: absolute;
-  top: 122px;
+  top: 119px;
   left: 238px;
 }
 
