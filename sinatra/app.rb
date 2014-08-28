@@ -37,7 +37,7 @@ get '/mypage' do
   begin
     @target_img = userget(target[0])[4]
   rescue
-    @target_img = "https://avatars0.githubusercontent.com/u/3541156?v=2&s=460"
+    @target_img = ""
   end
   erb :mypage
 end

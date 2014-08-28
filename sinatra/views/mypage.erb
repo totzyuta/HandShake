@@ -29,7 +29,11 @@
     <div class="circle circle8"></div>
     <div class="image">
       <div class="face-out-circle">
+        <% if @target_img == "" %>
         <a href="/select">
+        <% else %>
+        <a href="/conversation/to">
+        <% end %>
           <img src="<%= @target_img %>">
         </a>
       </div>
