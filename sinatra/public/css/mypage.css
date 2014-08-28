@@ -183,6 +183,12 @@
   left: 155px;
 }
 
+.firstContents .circle-anim1 {
+  height: 30px;
+  width: 30px;
+  top: 140px;
+  left: 30px;
+}
 
 .firstContents .slanting {
   height: 0px;
