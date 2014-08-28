@@ -13,16 +13,6 @@
 * フォームタイトル: #9e9498
 */
 
-html {
-  width: 640px;
-  height: 100%;
-}
-
-body {
-  width: 640px;
-  overflow: hidden;
-}
-
 .page{
   margin: 50px auto 20px;
   border-top: 1px solid #ccc;
@@ -82,8 +72,16 @@ body {
   margin-left: auto;
   margin-bottom: 20px;
   position: absolute;
+  right: 0px;
+  top: 50px;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.firstContents .mask {
+  position: relative;
+  top: -10px;
   right: -10px;
-  top: 45px;
 }
 
 .firstContents .face-out-circle {
@@ -192,8 +190,9 @@ body {
   border-top: 7px solid #ecb47b;
   border-left: 7px solid #ecb47b;
   position: absolute;
-  top: 136px;
-  left: 238px;
+  top: 134px;
+  left: 229px;
+  z-index: 4;
 }
 
 .firstContents .slanting2 {
@@ -204,8 +203,10 @@ body {
   border-left: 7px solid #ef932e;
   z-index: 5;
   position: absolute;
-  top: 135px;
-  left: 237px;
+  top: 133px;
+  left: 228px;
+  z-index: 4;
+
 }
 
 .firstContents .line  {
@@ -213,8 +214,8 @@ body {
   height: 0px;
   width: 75px;
   position: absolute;
-  top: 119px;
-  left: 238px;
+  top: 117px;
+  left: 230px;
 }
 
 .firstContents .circle9 {
@@ -368,8 +369,16 @@ body {
   margin-left: auto;
   margin-bottom: 20px;
   position: absolute;
+  left: 0px;
+  top:430px;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.secondContents .mask {
+  position: relative;
+  top: 10px;
   left: -10px;
-  top: 440px;
 }
 
 .secondContents .face-out-circle {
@@ -400,33 +409,34 @@ body {
   height: 0px;
   width: 0px;
   border: 7px solid transparent;
-  border-bottom: 7px solid #ec902e;
-  border-left: 7px solid #ec902e;
+  border-top: 7px solid #ec902e;
+  border-right: 7px solid #ec902e;
   position: absolute;
   top: 512px;
-  left: 85px;
+  left: 84px;
 }
 
 .secondContents .slanting2 {
   height: 0px;
   width: 0px;
   border: 7px solid transparent;
-  border-bottom: 7px solid white;
-  border-left: 7px solid white;
+  border-top: 7px solid white;
+  border-right: 7px solid white;
   z-index: 5;
   position: absolute;
-  top: 513px;
-  left: 83px;
-  background-color: none;
+  top: 511px;
+  left: 85px;
+  z-index: 3;
 }
 
 .secondContents .line {
   width: 67px;
-  border-top: 2px solid #ec902e;
+  border-top: 1px solid #ec902e;
   float: left;
   position: absolute;
   top: 525px;
   left: 97px;
+  z-index: 4;
 }
 
 .secondContents p {

@@ -29,14 +29,16 @@
     <div class="borderCircle circle7"></div>
     <div class="circle circle8"></div>
     <div class="image">
-      <div class="face-out-circle">
-        <% if @target_img == "" %>
-        <a href="/select">
-        <% else %>
-        <a href="/conversation/to">
-          <img src="<%= @target_img %>">
-        <% end %>
-        </a>
+      <div class="mask">
+        <div class="face-out-circle">
+          <% if @target_img == "" %>
+          <a href="/select">
+          <% else %>
+          <a href="/conversation/to">
+            <img src="<%= @target_img %>">
+          <% end %>
+          </a>
+        </div>
       </div>
     </div>
     <div class="slanting"></div>
@@ -84,15 +86,17 @@
     <div class="circle circle7"></div>
     <div class="borderCircle circle8"></div>
     <div class="image">
-      <div class="face-out-circle">
-        <% if @lover_img == "" %>
-        <a href="/mypage">
-        <% else %>
-        <a href="/conversation/from">
-          <img src="<%= @lover_img %>">
-        <% end %>
+      <div class="mask">
+        <div class="face-out-circle">
+          <% if @lover_img == "" %>
+          <a href="/mypage">
+          <% else %>
+          <a href="/conversation/from">
+            <img src="<%= @lover_img %>">
+          <% end %>
+        </div>
+            </div>
       </div>
-    </div>
     <div class="slanting"></div>
     <div class="slanting2"></div>
     <div class="line"></div>
