@@ -1,3 +1,18 @@
+/*
+* 白オレンジ         : #ece0d2
+* 黒                : #261a0d
+* 一番目に濃いオレンジ: #ec902e
+* 二番目に濃いオレンジ: #eca052
+* 三番目に濃いオレンジ: #ecb47b
+* 一番目に濃い紫     : #b75fd4
+* 二番目に濃い紫     : #de73e0
+* 三番目に濃い紫     : #d685a6
+* 黒紫              : #4f4549
+
+* フォーム: #d4c7cc
+* フォームタイトル: #9e9498
+*/
+
 body {
   background-color: #ec902e;
 }
@@ -104,5 +119,11 @@ input[type=name]:focus {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.box input:focus {
+  border-color: #ecb47b;
+  -webkit-box-shadow: 0px 0px 6px white;
+  outline:none;
 }
 
