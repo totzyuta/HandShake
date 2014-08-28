@@ -47,7 +47,9 @@ get '/mypage' do
   target = gettarget(user[0])
   begin
     #告白してる
-    @target_img = userget(target[2])[4]
+    @target = userget(target[2])
+    @target_name = @target[1]
+    @target_img = @target[4]
     #進捗計算
     conversations = conversationget(target[0])
     i = 0;
@@ -65,7 +67,9 @@ get '/mypage' do
   lover = getlover(user[0])
   begin
     #告白されてる
-    @lover_img = userget(lover[1])[4]
+    @lover = userget(lover[1])
+    @lover_name =@lover[1]
+    @lover_img = @lover[4]
     #進捗計算
     conversations = conversationget(lover[0])
     i = 0;

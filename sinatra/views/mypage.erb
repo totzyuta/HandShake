@@ -41,6 +41,9 @@
           </a>
           <% end %>
         </div>
+        <!-- ここに名前！
+        <p><%= @target_name %></p>
+        -->
       </div>
     </img>
     <div class="slanting"></div>
@@ -89,11 +92,11 @@
       <div class="mask">
         <div class="face-out-circle">
           <% if @lover_img == "" %>
-          <a href="/mypage">
             <img src="/images/unknown.png">
           <% else %>
           <a href="/conversation/from">
-            <img src="<%= @lover_img %>">
+            <img src="/images/unknown.png">
+          </a>
           <% end %>
         </div>
       </div>
