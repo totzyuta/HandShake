@@ -22,6 +22,7 @@ end
 
 #デバッグ用 session 付ける
 get '/session/:uid' do
+  session[:uid] = nil if params[:uid] == 'rm'
   session[:uid] = params[:uid]
   redirect '/mypage'
 end
@@ -57,6 +58,10 @@ get '/mypage' do
       i = i + 15;
       i = i + 15 if conv[4] != nil
     end
+
+    #最終告白が終わっているか
+    i = i + 5 if target[7] == 2.to_s
+
     @target_progress = i.to_s + '%'
   rescue
     #告白してない
@@ -77,6 +82,10 @@ get '/mypage' do
       i = i + 15;
       i = i + 15 if conv[4] != nil
     end
+
+    #最終告白が終わっているか
+    i = i + 5 if lover[7] == 2.to_s
+
     @lover_progress = i.to_s + '%'
   rescue
     #告白されてない
@@ -162,6 +171,16 @@ end
 
 #告白の返事
 get '/return' do
+  my_id = session[:uid]
+  @user = userget(my_id)
+  approach = getlover(my_id)
+  @lover = userget(approach[1])
+  @lover_name = @lover[1]
+  @lover_img = @lover[4]
+  @user_name = @user[1]
+  @user_img =@user[4]
+  @approach_id = approach[0]
+
   erb :return
 end
 
