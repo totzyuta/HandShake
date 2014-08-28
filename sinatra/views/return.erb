@@ -1,4 +1,4 @@
-<link href="/css/lovemax.css" rel="stylesheet" media="all">
+<link href="/css/return.css" rel="stylesheet" media="all">
 <div class="page">
   <div class="firstContents">
     <div class="arrows-to-right">
@@ -6,10 +6,15 @@
       <div class="arrow"></div>
       <div class="arrow"></div>
     </div>
+    <div class="arrows-to-left">
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+    </div>
     <div class="line-out">
       <div class="line-in">
         <p>
-          告白のメッセージを入力してください
+          告白を受けるかどうか選択してださい
         </p>
       </div>
     </div>
@@ -43,16 +48,23 @@
     <input type="hidden" name="target_id" value="<%= @target_id %>">
 
     <label>
-    <p>メッセージ</p>
-    <textarea type="text" class="form-control" name="handle" ></textarea>
+    <p>相手からのメッセージ</p>
+    <div class="message">
+      あなたのことがずっと好きでした．放課後に一生懸命部活をしているあなたの姿が忘れられません．僕と付き合ってください．
+    </div>
+    </label>
+    
+    <label>
+      <p>告白を受ける場合のメッセージ</p>
+      <input type="text" class="form-control" name="response" placeholder="ex ) よろしくお願いします．"/>
     </label>
 
     <div class="buttons">
       <div class="lapper">
-      <input class="button" type="submit" value="告白">
+        <input class="button" type="submit" name="judge" value="受ける">
       </div>
       <div class="lapper">
-      <a href="/" class="button2">戻る</a>
+        <input class="button2" type="submit" name="judge" value="受けない">
       </div>
     </div>
   </form>
