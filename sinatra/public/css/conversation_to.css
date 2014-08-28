@@ -206,10 +206,12 @@ body {
 .footer {
   text-align: center;
   background-color: #ec902e;
-  height: 50px;
+  height: 62px;
   width: 100%;
   position: fixed;
   bottom: 0px;
+  border-top: 2px white solid;
+  z-index: 15;
 }
 
 .text {
