@@ -47,6 +47,8 @@ end
 #IloveYou Page
 get '/love' do
   @target_img = userget(params['target'])[4]
+  @my_id = session['uid']
+  @target_id = params['target']
   erb :love
 end
 
@@ -69,11 +71,11 @@ end
 
 #I love You
 post '/iloveyou' do
-  p my_id = params[:my_id]
-  p target_id = params[:target_id]
-  p handle = params[:handle]
-  p point = params[:point]
-  p manifest = params[:manifest]
+  p my_id = @params[:my_id]
+  p target_id = @params[:target_id]
+  p handle = @params[:handle]
+  p point = @params[:point]
+  p manifest = @params[:manifest]
   iloveyou(my_id, target_id, handle, point, manifest)
   redirect '/mypage'
 end
