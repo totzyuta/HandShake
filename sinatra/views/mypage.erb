@@ -33,14 +33,16 @@
         <div class="face-out-circle">
           <% if @target_img == "" %>
           <a href="/select">
+            <img src="/images/unknown.png">
+          </a>
           <% else %>
           <a href="/conversation/to">
             <img src="<%= @target_img %>">
-          <% end %>
           </a>
+          <% end %>
         </div>
       </div>
-    </div>
+    </img>
     <div class="slanting"></div>
     <div class="slanting2"></div>
     <div class="line"></div>
@@ -88,12 +90,12 @@
         <div class="face-out-circle">
           <% if @lover_img == "" %>
           <a href="/mypage">
+            <img src="/images/unknown.png">
           <% else %>
           <a href="/conversation/from">
             <img src="<%= @lover_img %>">
           <% end %>
         </div>
-            </div>
       </div>
     <div class="slanting"></div>
     <div class="slanting2"></div>
