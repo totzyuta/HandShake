@@ -21,7 +21,7 @@
     <div class="image-container float-right">
       <div class="image">
         <div class="face-out-circle">
-          <img src="<%= @target_img %>">
+          <img src="<%= @lover_img %>">
         </div>
       </div>
       <p>Target Name</p>
@@ -30,7 +30,7 @@
     <div class="image-container float-left">
       <div class="image">
         <div class="face-out-circle">
-          <img src="<%= @target_img %>">
+          <img src="<%= @lover_img %>">
         </div>
       </div>
       <p>Target Name</p>
@@ -44,8 +44,7 @@
   <div class="secondContents">
     <form action="/iloveyou" method="post">
 
-    <input type="hidden" name="my_id" value="<%= @my_id %>">
-    <input type="hidden" name="target_id" value="<%= @target_id %>">
+    <input type="hidden" name="approach_id" value="<%= @approach_id %>">
 
     <label>
     <p>相手からのメッセージ</p>
