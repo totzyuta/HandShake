@@ -55,10 +55,6 @@ get '/mypage' do
     @target_img = ""
   end
 
-  @progress
-
-  #残り計算
-
   #告白されている方
   lover = getlover(user[0])
   begin
@@ -133,6 +129,10 @@ get '/conversation/:dir' do
     erb :conversation_from
   else
   end
+end
+
+get '/lovemax' do
+  erb :lovemax
 end
 
 get '/question' do
