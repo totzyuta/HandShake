@@ -67,8 +67,8 @@ def iloveyou(my_id, target_id, handle, point, manifest)
     manifest + '",' +
     'now(),
     0,
-    NULL,
-    NULL)'
+    "",
+    "")'
   $db.query sql
 end
 
