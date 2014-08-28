@@ -74,7 +74,7 @@ friendget(1).each do |i|
 end
 
 #
-#iloveyou(1,3,"","","")
+iloveyou(1,3,"","","")
 #p gettarget(1)
 #p getlover(3)
 
