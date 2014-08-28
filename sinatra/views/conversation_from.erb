@@ -3,10 +3,12 @@
   <div class="titleBar">
     <h3>Questions</h3>
     <p>You&nbsp;<span class="small">&#x25B6;&#x25B6;</span>&nbsp;Secret<p>
-    <!-- <div class="line"></div> -->
+    <div class="line"></div>
   </div>
 
+  <% @conv_num = 0 %>
   <% @conversations.each do |conv| %>
+  <% @conv_num = @conv_num + 1 %>
   <div class="conversation">
     <h4>Question.</h4>
     <div class="wrapper">
@@ -42,6 +44,11 @@
       <% end %>
     </div>
   </div>
+  <% end %>
+
+  <!-- 質問がまだない場合 -->
+  <% if @conv_num == 0 %>
+    <p style="color:black;">ここになにか</p>
   <% end %>
 
   <!-- 3回質問したら聞かない -->
