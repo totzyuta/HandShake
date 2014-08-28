@@ -35,7 +35,7 @@ get '/mypage' do
   @my_img = user[4]
   target = gettarget(user[0])
   begin
-    @target_img = userget(target[0])[4]
+    @target_img = userget(target[2])[4]
   rescue
     @target_img = ""
   end
