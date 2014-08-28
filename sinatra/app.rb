@@ -31,7 +31,14 @@ end
 
 #My Page
 get '/mypage' do
-
+  user = userget(session['uid'])
+  @my_img = user[4]
+  target = gettarget(user[0])
+  begin
+    @target_img = userget(target[0])[4]
+  rescue
+    @target_img = "https://avatars0.githubusercontent.com/u/3541156?v=2&s=460"
+  end
   erb :mypage
 end
 
