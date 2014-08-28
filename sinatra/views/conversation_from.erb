@@ -23,6 +23,11 @@
           <div class="slanting2"></div>
           <div class="line"></div>
         </div>
+
+        <div class="question">
+          <span><%= conv[1].force_encoding("utf-8") %></span>
+        </div>
+
         <div class="loverimg">
           <img class="loverimg" src="<%= @lover_img %>">
           <div class="slanting"></div>
@@ -31,9 +36,6 @@
         </div>
       </div>
 
-      <div class="question">
-        <span><%= conv[1].force_encoding("utf-8") %></span>
-      </div>
       <% if conv[4] == nil %>
       <div class="answer">
         <span></span>
@@ -78,3 +80,4 @@
   <% end %>
 
 </div>
+<script src="/js/conversation_from.js"></script>
