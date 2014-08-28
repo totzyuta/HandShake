@@ -50,6 +50,7 @@ get '/mypage' do
   user = userget(session['uid'])
   @my_img = user[4]
   target = gettarget(user[0])
+  tmpl = 'style="border: dotted 2px #fff; background-color: #ec902e;"'
   begin
     #告白してる
     @target = userget(target[2])
@@ -68,7 +69,6 @@ get '/mypage' do
     i = i + 10 if target[7] == 3.to_s
 
     #円を破線にする
-    tmpl = 'style="border: dotted 2px #fff; background-color: #ec902e;"'
     @target_circle1 = i >= 15 ? "" : tmpl
     @target_circle2 = i >= 30 ? "" : tmpl
     @target_circle3 = i >= 45 ? "" : tmpl
@@ -82,10 +82,21 @@ get '/mypage' do
   rescue
     #告白してない
     @target_img = ""
+
+    #円を破線にする
+    @target_circle1 = tmpl
+    @target_circle2 = tmpl
+    @target_circle3 = tmpl
+    @target_circle4 = tmpl
+    @target_circle5 = tmpl
+    @target_circle6 = tmpl
+    @target_circle7 = tmpl
+    @target_circle8 = tmpl
   end
 
   #告白されている方
   lover = getlover(user[0])
+  tmpl = 'style="border: dotted 2px #ec902e; background-color: #fff;"'
   begin
     #告白されてる
     @lover = userget(lover[1])
@@ -104,7 +115,6 @@ get '/mypage' do
     i = i + 10 if lover[7] == 3.to_s
 
     #円を破線にする
-    tmpl = 'style="border: dotted 2px #ec902e; background-color: #fff;"'
     @lover_circle1 = i >= 15 ? "" : tmpl
     @lover_circle2 = i >= 30 ? "" : tmpl
     @lover_circle3 = i >= 45 ? "" : tmpl
@@ -119,6 +129,16 @@ get '/mypage' do
   rescue
     #告白されてない
     @lover_img = ""
+
+    #円を破線にする
+    @lover_circle1 = tmpl
+    @lover_circle2 = tmpl
+    @lover_circle3 = tmpl
+    @lover_circle4 = tmpl
+    @lover_circle5 = tmpl
+    @lover_circle6 = tmpl
+    @lover_circle7 = tmpl
+    @lover_circle8 = tmpl
   end
 
   #残り計算
