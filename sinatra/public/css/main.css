@@ -108,7 +108,7 @@ input[type="text"], textarea {
   text-decoration: none;
 }
 
-.topPage .button:active {
+.button:active {
   color: white;
   background-color: #ef932e;
   text-decoration: none;

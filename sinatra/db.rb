@@ -81,6 +81,15 @@ def iloveyoufinal(approach_id, main)
   $db.query sql
 end
 
+# 最終告白をする
+def loveisok(approach_id, response, result)
+  sql = 'update approaches set
+    response = "' + response + '",
+    status = ' + (result ? 3 : 4).to_s + '
+    where approach_id = "' + approach_id.to_s + '"'
+  $db.query sql
+end
+
 #approch_id を照会する
 #def approchget(lover_id, target_id)
 #  sql = 'select * from approaches where'

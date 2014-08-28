@@ -19,29 +19,17 @@
     <h3>この内容で登録しますか？</h3>
     <div class="buttons">
       <div class="lapper">
-      <a href="/mypage" class="button touch">登録</a>
+        <a href="/mypage">
+          <div class="button">登録</div>
+        </a>
       </div>
       <div class="lapper">
-      <a href="/" class="button2">戻る</a>
+        <a href="/">
+          <div class="button2">戻る</div>
+        </a>
       </div>
     </div>
   </div>
 </div>
 </section>
-
-<script type="text/javascript">
-$(function() {
-  $("a.touch").bind({
-    touchstart: function () {
-      $(this).removeClass().addClass("touchstart");
-    }
-  });
-});
-$(function() {
-  $("a.touch").bind({
-    touchend: function () {
-      $(this).removeClass().addClass("touchend");
-    }
-  });
-});
-</script>
+<script type="text/javascript" src="/js/main.js"></script>
