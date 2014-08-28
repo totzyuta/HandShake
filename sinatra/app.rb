@@ -36,12 +36,17 @@ end
 
 #Select Page
 get '/select' do
-  @target_img = userget(session['uid'])[4]
+  @friends_ids = []
+  p session['uid']
+  friendget(session['uid']).each do |id|
+    @friends_ids << [id,userget(id)[4]]
+  end
   erb :select
 end
 
 #IloveYou Page
 get '/love' do
+  @target_img = userget(params['target'])[4]
   erb :love
 end
 

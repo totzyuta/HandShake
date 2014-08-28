@@ -64,7 +64,7 @@ p userget(3)
 10.times do |i|
   10.times do |j|
     if rand(2) == 1
-      friendadd(i,j)
+      friendadd(i+1,j+1)
     end
   end
 end

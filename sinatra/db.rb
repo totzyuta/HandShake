@@ -24,7 +24,7 @@ def useradd(name, sex, mail, photo)
   rs.each{|col|
     id = (col[0].to_i+1).to_s
   }
-  sql = 'insert into users values(' + id + ' ,"' + name + '",' + sex.to_s + ',"' + mail + '","' + photo + '","","")'
+  sql = 'insert into users values(' + id + ' ,"' + name + '",' + sex.to_s + ',"' + mail + '","' + photo + '",NULL,NULL)'
   $db.query sql
   return id
 end
@@ -50,7 +50,7 @@ def friendget(my_id)
   rs = $db.query sql
   result = []
   rs.each{|col|
-    result << col#.join("\t")
+    result << col[1]#.join("\t")
   }
   return result
 end
@@ -100,7 +100,7 @@ def conversationadd(approach_id, question_id)
     NULL ,' +
     approach_id.to_s + ',' +
     question_id.to_s + ',' +
-    'now()' + ',"","")'
+    'now()' + ',NULL,NULL)'
   $db.query sql
 end
 

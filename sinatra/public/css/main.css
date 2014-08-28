@@ -116,10 +116,9 @@ body {
 
 .registeringPage .image {
   display: table;
-  margin-top: 15px;
+  margin-top: 38px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 20px;
 }
 
 .registeringPage .face-out-circle {
@@ -146,11 +145,15 @@ body {
 }
 
 .forms {
+  height: 10px;
   margin-bottom: 15px;
+  position: absolute;
+  top: 164px;
+  left: 73px;
 }
 
 .firstContents input {
-  margin-bottom: 6px;
+  margin-bottom: 3px;
 }
 
 .secondContents h3 {
@@ -217,7 +220,7 @@ body {
   float: left;
 }
 
-.myPage p {
+.myPage .firstContents p {
   margin-top: 50px;
   font-size: 30px;
   color: #ece0d2;
@@ -390,6 +393,7 @@ body {
 }
 
 .myPage .firstContents .pct p {
+  color: #eee;
   font-size: 40px;
   font-weight: bold;
   position: absolute;
@@ -397,6 +401,7 @@ body {
   right: 3px;
 }
 
+/* Middle Contents from Here */
 .myPage .middleContents .image {
   display: table;
   position: absolute;
@@ -427,6 +432,69 @@ body {
   border-radius: 50px;
   border: 5px solid #eca052;
 }
+
+/* Second Contents from Here */
+.myPage .secondContents .pct p {
+  color: #ef932e;
+  font-size: 40px;
+  position: absolute;
+  top: 240px;
+  left: 10px;
+}
+
+.myPage .secondContents .image {
+  display: table;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  position: absolute;
+  right: -10px;
+  top: 45px;
+}
+
+.myPage .secondContents .face-out-circle {
+    height: 130px;
+    width: 130px;
+    margin: 0px auto;
+    -moz-border-radius: 130px;
+    -webkit-border-radius: 130px;
+    border-radius: 130px;
+    border: 1px solid #eee;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.myPage .secondContents img {
+  height: 105px;
+  width: 105px;
+  margin: 0px auto;
+  background-size: cover;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.myPage .secondContents p {
+  margin-top: 50px;
+  font-size: 30px;
+  color: #ef932e;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.myPage .triangle {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-left: 8px solid #eee;
+  position: absolute;
+  top: 222px;
+  left: 307px;
+}
+
 
 .myface{
   height: 80px;
@@ -476,6 +544,16 @@ body {
 .answer{
   background-color: #9e9;
 }
+
+.select .face-out-circle {
+  float: left;
+}
+
+.select .face-out-circle img{
+  width: 80px;
+  float: left;
+}
+
 
 .love {
   height: 130px;
