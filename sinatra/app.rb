@@ -15,6 +15,7 @@ enable :session
 
 #Top Page
 get '/' do
+  #セッションがあったら/mypageに飛ばす
   erb :index
 end
 
