@@ -1,6 +1,21 @@
+/*
+* 白オレンジ         : #ece0d2
+* 黒                : #261a0d
+* 一番目に濃いオレンジ: #ec902e
+* 二番目に濃いオレンジ: #eca052
+* 三番目に濃いオレンジ: #ecb47b
+* 一番目に濃い紫     : #b75fd4
+* 二番目に濃い紫     : #de73e0
+* 三番目に濃い紫     : #d685a6
+* 黒紫              : #4f4549
+
+* フォーム: #d4c7cc
+* フォームタイトル: #9e9498
+*/
+
 body {
   color: white;
-  background-color: white;
+  background-color: #ec902e;
 }
 
 .titleBar {
@@ -12,14 +27,14 @@ body {
   float: left;
   margin: 0px;
   margin-left: 5px;
-  margin-top: 8px;
+  margin-top: 5px;
 }
 
 .titleBar p {
-  float: left;
+  float: right;
   margin: 0px;
-  margin-top: 15px;
-  margin-left: 9px;
+  margin-top: 11px;
+  margin-right: 5px;
 }
 
 .titleBar p .small {
@@ -28,10 +43,10 @@ body {
 
 .titleBar .line {
   width: 100%;
-  height: 3px;
+  height: 1px;
   background-color: white;
-  position: absolute;
-  top: 15%
+  position: relative;
+  top: 35px;
 }
 
 .conversation {
@@ -122,6 +137,7 @@ body {
   position: relative;
   right: -112px;
   top: -10px;
+  width: 80px;
 }
 
 .conversation .loverimg img {
@@ -141,8 +157,8 @@ body {
   border: 10px solid transparent;
   border-top: 10px solid #eca052;
   border-left: 10px solid #eca052;
-  position: relative;
-  top: -34px;
+  position: absolute;
+  top: 46px;
   left: 103px;
 }
 
@@ -153,8 +169,8 @@ body {
   border-top: 10px solid #ec902e;
   border-left: 10px solid #ec902e;
   z-index: 10;
-  position: relative;
-  top: -54px;
+  position: absolute;
+  top: 46px;
   left: 97px;
 }
 
@@ -167,39 +183,56 @@ body {
   left: -65px;
 }
 
+.question {
+  position: relative;
+  width: 180px;
+  top: -137px;
+  left: 136px;
+  color: #ece0d2;
+  background-color: transparent;
+}
+
+.answer {
+  position: relative;
+  width: 150px;
+  top: -66px;
+  left: 56px;
+  color: #ece0d2;
+  background-color: transparent;
+}
+
+
 /* footer */
 .footer {
   text-align: center;
   background-color: #ec902e;
-  height: 30px;
+  height: 62px;
   width: 100%;
   position: fixed;
   bottom: 0px;
+  border-top: 2px white solid;
+  z-index: 15;
 }
 
 .text {
+  color: black;
   width: 200px;
-  height: 22px;
+  height: 40px;
   border-color: white;
-  margin-left: 20px;
-}
-
-.selection {
-  background-color: #ec902e;
-  width: 200px;
-  height: 22px;
-
-  border-color: white;
+  margin-left: 8px;
+  margin-right: 5px;
+  margin-top: 10px;
 }
 
 .button {
-  color: white;
+  color: #ec902e;
   font-size: 14px;
-  background-color: #ec902e;
+  background-color: white;
   font-size: 13px;
+  border: none;
    
   width: 70px;
-  height: 22px;
+  height: 40px;
 
   padding-top: 3px;
   border: solid;
@@ -212,3 +245,33 @@ body {
   border-radius: 5px;
 }
 
+.line-out{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.line-in {
+  border-top: #ec902e solid 1px;
+  border-bottom: #ec902e solid 1px;
+}
+
+.line-in p{
+  position: inherit;
+  z-index: 10;
+  margin: 0px;
+  font-size: 23px;
+  color: #261a0d;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}
+
+.conv-zero {
+  top: 170px;
+}
+
+.conv-non-zero {
+  top: 10px;
+}

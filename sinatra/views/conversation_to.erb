@@ -1,13 +1,18 @@
-<link href="/css/conversation.css" rel="stylesheet" type="text/css">
+<link href="/css/conversation_to.css" rel="stylesheet" type="text/css">
 <div class="page">
-  <div class="titleBar">
-    <h3>Questions</h3>
-    <p>You&nbsp;<span class="small">&#x25B6;&#x25B6;</span>&nbsp;Natsuki<p>
+  <div class="titleBar"> 
     <div class="line"></div>
+    <h3>Questions</h3>
+    <p>You&nbsp;<span class="small">&#x25B6;&#x25B6;</span>&nbsp;<%= @target_name %><p>
   </div>
 
+  <% @conv_num = 0 %>
+  <% @answer = 0 %>
+  <% @conversations.each do |conv| %>
+  <% @conv_num = @conv_num + 1 %>
+  <% @cid = conv[0] %>
   <div class="conversation">
-    <h4>Question1.</h4>
+    <h4>Question.<%= @conv_num %></h4>
     <div class="wrapper">
       <div class="image">
         <div class="targetimg">
@@ -26,44 +31,53 @@
         </div>
       </div>
 
-      <% @conversations.each do |conv| %>
       <div class="question">
         <span><%= conv[1].force_encoding("utf-8") %></span>
       </div>
       <% if conv[4] == nil %>
-        <% answer = 1 %>
+      <% @answer = 1 %>
       <% else %>
+      <% @answer = 0 %>
       <div class="answer">
         <span><%= conv[4].force_encoding("utf-8") %></span>
       </div>
       <% end %>
     </div>
   </div>
+  <% end %>
 
-    <!-- 3回質問したら聞かない -->
+  <!-- 質問がまだない場合 -->
+  <% if @conv_num == 0 %>
+    <div class="line-out conv-zero">
+      <div class="line-in">
+        <p>
+          まだ質問がありません
+        </p>
+      </div>
+    </div>
+  <% end %>
 
+
+  <% if @conv_num != 0 && @answer == 0 %>
+  <!-- 告白した側：解答フォーム -->
+    <div class="line-out conv-non-zero">
+      <div class="line-in">
+        <p>
+          質問がまだ来ていません
+        </p>
+      </div>
+    </div>
+  <% end %>
+
+  <!-- 質問がなかったら解答フォームはない -->
+  <% if @answer == 1 %>
   <!-- 告白した側：解答フォーム -->
   <div class="footer">
-      <form action="/answer" method="post">
-        <input type="hidden" name="conversation_id" value="<%= conv[0] %>">
-      <% end %>
-        <input type="text" name="answer" class="text">
-        <input type="submit" value="答える" class="button">
-      </form>
-  </div>
-  <!-- 告白された側：質問フォーム -->
-  <div class="footer">
-    <form action="/question" method="post">
-      <input type="hidden" name="approach_id" value="<%= @approach[0] %>">
-      <select name="question_id" class="selection">
-      <% @questions.each do |q| %>
-        <option value="<%= q[0] %>"><%= q[1].force_encoding("utf-8") %></option>
-      <% end %>
-      </select>
-      <input type="submit" value="質問する" class="button">
+    <form action="/answer" method="post">
+      <input type="hidden" name="conversation_id" value="<%= @cid %>">
+      <input type="text" name="answer" class="text">
+      <input type="submit" value="答える" class="button">
     </form>
   </div>
-
-  <div class="conversation">
-  </div>
+  <% end %>
 </div>

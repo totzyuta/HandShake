@@ -1,5 +1,28 @@
-body {
+/*
+* 白オレンジ         : #ece0d2
+* 黒                : #261a0d
+* 一番目に濃いオレンジ: #ec902e
+* 二番目に濃いオレンジ: #eca052
+* 三番目に濃いオレンジ: #ecb47b
+
+* 一番目に濃い紫     : #b75fd4
+* 二番目に濃い紫     : #de73e0
+* 三番目に濃い紫     : #d685a6
+* 黒紫              : #4f4549
+
+* フォーム: #d4c7cc
+* フォームタイトル: #9e9498
+*/
+
+
+body{
+
 }
+
+input[type="text"], textarea {
+  box-shadow: none;
+}
+
 
 /*
 .container {
@@ -10,8 +33,14 @@ body {
 }
 */
 
+.navigation {
+  border: none;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
 .logo-image {
-  margin-top: -10px;
+  margin-top: -15px;
 }
 
 .logo-text {
@@ -45,8 +74,8 @@ body {
  */
 
 .hero-top{
-  height: 240px;
-  background-image: url("http://www.fukei-kabegami.com/cgi-bin/photo2/335/4839/1024-768.jpg");
+  height: 236px;
+  background-image: url("../images/classroom.png");
   background-size: cover;
 }
 
@@ -76,7 +105,15 @@ body {
   border-radius 10px;
   /* for chrome, safari */
   -webkit-border-radius: 10px;
+  text-decoration: none;
 }
+
+a.touchstart {
+  color: white;
+  background-color: #ef932e;
+  text-decoration: none;
+}
+
 
 .triangle {
   margin-right: auto;
@@ -277,4 +314,22 @@ body {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+}
+
+.line{
+  position: relative;
+  top: 49px;
+  width: 100%;
+  height: 2px;
+  border: solid 0px;
+  background: #ec902e;
+}
+
+.top-image-line{
+  position: relative;
+  top: 2px;
+  width: 100%;
+  height: 2px;
+  border: solid 0px;
+  background: #ec902e;
 }

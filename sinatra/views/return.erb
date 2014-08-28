@@ -1,0 +1,71 @@
+<link href="/css/return.css" rel="stylesheet" media="all">
+<div class="page">
+  <div class="firstContents">
+    <div class="arrows-to-right">
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+    </div>
+    <div class="arrows-to-left">
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+    </div>
+    <div class="line-out">
+      <div class="line-in">
+        <p>
+          告白を受けるかどうか選択してださい
+        </p>
+      </div>
+    </div>
+    <div class="image-container float-right">
+      <div class="image">
+        <div class="face-out-circle">
+          <img src="<%= @user_img %>">
+        </div>
+      </div>
+      <p><%= @user_name %></p>
+    </div>
+
+    <div class="image-container float-left">
+      <div class="image">
+        <div class="face-out-circle">
+          <img src="<%= @lover_img %>">
+        </div>
+      </div>
+      <p><%= @lover_name %></p>
+      <div class="borderCircle circle1"></div>
+      <div class="borderCircle circle2"></div>
+      <div class="circle circle3"></div>
+      <div class="circle circle4"></div>
+      <div class="circle circle5"></div>
+    </div>
+  </div>
+  <div class="secondContents">
+    <form action="/iloveyouresult" method="post">
+
+    <input type="hidden" name="approach_id" value="<%= @approach_id %>">
+
+    <label>
+    <p>相手からのメッセージ</p>
+    <div class="message">
+      <%= @approach_main.force_encoding('utf-8') %>
+    </div>
+    </label>
+
+    <label>
+      <p>告白を受ける場合のメッセージ</p>
+      <input type="text" class="form-control" name="response" placeholder="ex ) よろしくお願いします．"/>
+    </label>
+
+    <div class="buttons">
+      <div class="lapper">
+        <input class="button" type="submit" name="judge" value="受ける">
+      </div>
+      <div class="lapper">
+        <input class="button2" type="submit" name="judge" value="受けない">
+      </div>
+    </div>
+  </form>
+  </div>
+</div>

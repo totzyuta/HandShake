@@ -1,0 +1,267 @@
+/*
+* 白オレンジ         : #ece0d2
+* 黒                : #261a0d
+* 一番目に濃いオレンジ: #ec902e
+* 二番目に濃いオレンジ: #eca052
+* 三番目に濃いオレンジ: #ecb47b
+* 一番目に濃い紫     : #b75fd4
+* 二番目に濃い紫     : #de73e0
+* 三番目に濃い紫     : #d685a6
+* 黒紫              : #4f4549
+
+* フォーム: #d4c7cc
+* フォームタイトル: #9e9498
+*/
+
+body {
+  color: white;
+  background-color: #ec902e;
+}
+
+.titleBar {
+  height: 38px;
+  background-color: #ec902e;
+}
+
+.titleBar h3 {
+  float: left;
+  margin: 0px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.titleBar p {
+  float: right;
+  margin: 0px;
+  margin-top: 11px;
+  margin-right: 5px;
+}
+
+.titleBar p .small {
+  font-size: 8px;
+}
+
+.titleBar .line {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: relative;
+  top: 35px;
+}
+
+.conversation {
+  background-color: white;
+  margin-top: 20px;
+}
+
+.conversation h4 {
+  color: #ec902e;
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+.wrapper {
+  background-color: #ec902e;
+}
+
+/* target_img */
+.conversation .image .targetimg {
+  display: table;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  position: relative;
+  right: 90px;
+  top: 10px;
+}
+
+.conversation .targetimg .face-out-circle {
+  height: 115px;
+  width: 115px;
+  margin: 0px auto;
+  -moz-border-radius: 130px;
+  -webkit-border-radius: 130px;
+  border-radius: 130px;
+  border: 3px solid #ecb47b;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.conversation .targetimg img {
+  height: 90px;
+  width: 90px;
+  margin: 0px auto;
+  background-size: cover;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 5px solid #eca052;
+}
+
+.conversation .targetimg .slanting {
+  height: 0px;
+  width: 0px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #ecb47b;
+  border-left: 10px solid #ecb47b;
+  position: absolute;
+  top: 72px;
+  left: 112px;
+}
+
+.conversation .targetimg .slanting2 {
+  height: 0px37;
+  width: 0px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #ec902e;
+  border-left: 10px solid #ec902e;
+  z-index: 10;
+  position: relative;
+  top: 78px;
+  left: -3px;
+}
+
+.conversation .targetimg .line  {
+  border-top: 4px solid #ecb47b;
+  height: 0px;
+  width: 188px;
+  position: absolute;
+  top: 88px;
+  left: 115px;
+}
+
+/* lover_img */
+.conversation .image .loverimg {
+  position: relative;
+  right: -112px;
+  top: -10px;
+  width: 80px;
+}
+
+.conversation .loverimg img {
+  height: 80px;
+  width: 80px;
+  margin: 0px auto;
+  background-size: cover;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 8px solid #eca052;
+}
+
+.conversation .loverimg .slanting {
+  height: 0px;
+  width: 0px;
+  border: 10px solid transparent;
+  border-top: 10px solid #eca052;
+  border-left: 10px solid #eca052;
+  position: absolute;
+  top: 46px;
+  left: 103px;
+}
+
+.conversation .loverimg .slanting2 {
+  height: 0px;
+  width: 0px;
+  border: 10px solid transparent;
+  border-top: 10px solid #ec902e;
+  border-left: 10px solid #ec902e;
+  z-index: 10;
+  position: absolute;
+  top: 46px;
+  left: 97px;
+}
+
+.conversation .loverimg .line  {
+  border-top: 3px solid #eca052;
+  height: 0px;
+  width: 170px;
+  position: absolute;
+  top: 63px;
+  left: -65px;
+}
+
+.question {
+  position: relative;
+  width: 180px;
+  top: -137px;
+  left: 136px;
+  color: #ece0d2;
+  background-color: transparent;
+}
+
+.answer {
+  position: relative;
+  width: 150px;
+  top: -66px;
+  left: 56px;
+  color: #ece0d2;
+  background-color: transparent;
+}
+
+
+/* footer */
+.footer {
+  text-align: center;
+  background-color: #ec902e;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  border-top: 2px white solid;
+}
+
+.selection {
+  /* for smartphone */
+  color: #ec902e;
+  background-color: #ec902e;
+  width: 200px;
+  height: 40px;
+
+  border-color: white;
+  margin-top: 10px;
+}
+
+.button {
+  color: #ec902e;
+  font-size: 14px;
+  background-color: white;
+  font-size: 13px;
+  border: none;
+
+  width: 70px;
+  height: 40px;
+
+  padding-top: 3px;
+  margin: 4px;
+   
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.line-out{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-top: 1px;
+  padding-bottom: 1px;
+  top: 170px;
+}
+
+.line-in {
+  border-top: #ec902e solid 1px;
+  border-bottom: #ec902e solid 1px;
+}
+
+.line-in p{
+  position: inherit;
+  z-index: 10;
+  margin: 0px;
+  font-size: 23px;
+  color: #261a0d;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}
