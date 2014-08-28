@@ -250,7 +250,6 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
   padding-top: 1px;
   padding-bottom: 1px;
-  top: 170px;
 }
 
 .line-in {
@@ -267,4 +266,12 @@ body {
   padding-top: 3px;
   padding-bottom: 3px;
   text-align: center;
+}
+
+.conv-zero {
+  top: 170px;
+}
+
+.conv-non-zero {
+  top: 10px;
 }
