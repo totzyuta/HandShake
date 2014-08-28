@@ -10,6 +10,15 @@ body {
 }
 */
 
+.logo-image {
+  margin-top: -10px;
+}
+
+.logo-text {
+  font-size: 25px;
+  color: #ec902e;
+}
+
 .page{
   width:100%;
   margin: 50px auto 20px;
