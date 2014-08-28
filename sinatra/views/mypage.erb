@@ -32,6 +32,7 @@
       <div class="face-out-circle">
         <% if @target_img == "" %>
         <a href="/select">
+          <img src="/images/unknown.png">
         <% else %>
         <a href="/conversation/to">
           <img src="<%= @target_img %>">
@@ -87,6 +88,7 @@
       <div class="face-out-circle">
         <% if @lover_img == "" %>
         <a href="/mypage">
+          <img src="/images/unknown.png">
         <% else %>
         <a href="/conversation/from">
           <img src="<%= @lover_img %>">
