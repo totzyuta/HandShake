@@ -1,0 +1,135 @@
+/*
+
+白: #ece0d2
+一番目に濃いオレンジ: #ec902e
+二番目に濃いオレンジ: #eca052
+三番目に濃いオレンジ: #ecb47b
+黒: #261a0d
+
+*/
+
+.profile {
+  position: absolute;
+  text-align: center;
+  top: 175px;
+  width: 100%;
+}
+
+.profile .name{
+  font-size: 24px;
+  color: white;
+}
+
+.profile .email{
+  font-size: 13px;
+  font-weight: 200;
+  color: white;
+}
+
+.firstContents .image-container {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.firstContents .image {
+  display: table;
+  margin-top: 65px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.firstContents .face-out-circle {
+  margin: 0px auto;
+  -moz-border-radius: 130;
+  -webkit-border-radius: 130px;
+  border-radius: 130;
+  border: 2px solid #ecb47b;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+  height: 105px;
+  width: 105px;
+}
+
+.firstContents .face-out-circle img{
+  margin: 0px auto;
+  background-size: cover;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+
+  height: 90px;
+  width: 90px;
+  border: 5px #eca052 solid;
+}
+
+.secondContents .buttons {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 15px 0;
+  vertical-align: middle;
+  height: 50px;
+}
+
+
+.secondContents .lapper {
+  display: table-cell;
+  margin: 0px;
+  padding: 0px;
+}
+
+.secondContents .button {
+  display: block;
+  color: #ef932e;
+  font-size: 18px;
+
+  width: 120px;
+  height: 50px;
+
+  padding-top: 12px;
+  padding-bottom: 10px;
+  border: solid;
+  border-width: 1px;
+  border-color: #ef932e;
+ 
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.secondContents .button2 {
+  display: block;
+  color: white;
+  font-size: 18px;
+
+  width: 70px;
+  height: 45px;
+
+  background-color: #ef932e;
+  padding-top: 10px;
+  margin-top: 0px;
+
+  border: solid;
+  border-width: 1px;
+  /* for chrome, safari */
+   -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+
+.image {
+
+}
+
+.secondContents h3 {
+  margin-top: 50px;
+  font-size: 22px;
+}
+
+

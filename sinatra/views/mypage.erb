@@ -1,18 +1,93 @@
-<div class="page">
-  <div class="target-face">
-    <div class="regist-face">
+<LINK href="/css/mypage.css" rel="stylesheet" type="text/css">
+<section class="myPage">
+  <div class="firstContents">
+    <!-- 上画面：告白していない -->
+    <!--
+    <div class="lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="target-face">
+      <div class="regist-face">
+      </div>
+    </div>
+    <div class="hero target">
+    </div>
+    -->
+
+    <!-- 上画面：告白している -->
+    <p><span class="strong">3</span>Days</p>
+    <div class="borderCircle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="borderCircle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="circle circle5"></div>
+    <div class="borderCircle circle6"></div>
+    <div class="borderCircle circle7"></div>
+    <div class="circle circle8"></div>
+    <div class="image">
+      <div class="face-out-circle">
+        <% if @target_img == "" %>
+        <a href="/select">
+        <% else %>
+        <a href="/conversation/to">
+        <% end %>
+          <img src="<%= @target_img %>">
+        </a>
+      </div>
+    </div>
+    <div class="slanting"></div>
+    <div class="slanting2"></div>
+    <div class="line"></div>
+    <div class="borderCircle circle9"></div>
+    <div class="triangle"></div>
+    <div class="strong pct">
+      <p>90%</p>
     </div>
   </div>
-  <div class="hero target">
-  </div>
-  <div class="myface">
-    <div class="regist-face">
+
+  <div class="middleContents">
+    <div class="image">
+      <div class="face-out-circle">
+        <img src="<%= @my_img %>">
+      </div>
     </div>
   </div>
-  <div class="hero lover">
-  </div>
-  <div class="lover-face">
-    <div class="regist-face">
+
+  <div class="secondContents">
+    <!-- 下画面：告白されていない -->
+
+
+    <!-- 下画面：告白されている -->
+    <div class="strong pct">
+      <p>80%</p>
     </div>
+    <div class="borderCircle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="borderCircle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="borderCircle circle5"></div>
+    <div class="circle circle6"></div>
+    <div class="circle circle7"></div>
+    <div class="borderCircle circle8"></div>
+    <div class="image">
+      <div class="face-out-circle">
+        <% if @lover_img == "" %>
+        <a href="/mypage">
+        <% else %>
+        <a href="/conversation/from">
+        <% end %>
+          <img src="<%= @lover_img %>">
+      </div>
+    </div>
+    <div class="slanting"></div>
+    <div class="slanting2"></div>
+    <div class="line"></div>
+    <div class="borderCircle circle9"></div>
+    <div class="triangle"></div>
+    <p><span class="strong">12</span>Hours</p>
+
   </div>
-</div>
+</section>

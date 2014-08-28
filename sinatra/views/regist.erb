@@ -1,15 +1,28 @@
-<div class="page">
-  <section class="hero regist">
-    <div class="face-out-circle">
-      <div class="regist-face">
+<link href="/css/regist.css" rel="stylesheet" media="all">
+<div class="firstContents">
+  <div class="image-container">
+    <div class="image">
+      <div class="face-out-circle">
+        <img src="<%= @regist_img %>">
       </div>
     </div>
-    <input type="name" class="form-control" id="Email" placeholder="Enter name">
-    <input type="email" class="form-control" id="Email" placeholder="Enter email">
-  </section>
+  </div>
+  <div class="profile">
+    <div class="name"><%= @regist_name %></div>
+    <div class="email"><%= @regist_email %></div>
+  </div>
 </div>
 
-<div style="text-align: center;">
-  <div class="btn btn-default">Yes</div>
-  <div class="btn btn-default">No</div>
+<div class="secondContents">
+  <div style="text-align: center;">
+    <h3>この内容で登録しますか？</h3>
+    <div class="buttons">
+      <div class="lapper">
+      <a href="/mypage" class="button">登録</a>
+      </div>
+      <div class="lapper">
+      <a href="/" class="button2">戻る</a>
+      </div>
+    </div>
+  </div>
 </div>

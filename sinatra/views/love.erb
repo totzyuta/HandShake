@@ -1,6 +1,51 @@
+<link href="/css/love.css" rel="stylesheet" media="all">
 <div class="page">
-  <h3>告白事項</h3>
-  <input type="text" class="form-control" id="HN" placeholder="Your Kokuhaku Name.">
-  <input type="text" class="form-control" id="Reason" placeholder="Where do you like target.">
-  <input type="text" class="form-control" id="Manifest" placeholder="Your manifest.">
+  <div class="firstContents">
+    <div class="image-container">
+      <div class="image">
+        <div class="face-out-circle">
+          <img src="<%= @target_img %>">
+        </div>
+      </div>
+    </div>
+    <div class="borderCircle circle1"></div>
+    <div class="borderCircle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="profile">
+      <div class="name"><%= @regist_name %>Target Name</div>
+      <div class="email"><%= @regist_email %>target.email@example.com</div>
+    </div>
+  </div>
+  <div class="secondContents">
+    <form action="/iloveyou" method="post">
+
+    <input type="hidden" name="my_id" value="<%= @my_id %>">
+    <input type="hidden" name="target_id" value="<%= @target_id %>">
+
+    <label>
+    <p>ハンドルネーム</p>
+    <input type="text" class="form-control" name="handle" placeholder="ex ) テスト">
+    </label>
+    
+    <label>    
+    <p>好きなところ</p>
+    <input type="text" class="form-control" name="point" placeholder="ex ) 優しいところ">
+    </label>
+
+    <label>
+    <p>付き合ったらあかつきには...</p>
+    <input type="text" class="form-control" name="manifest" placeholder="ex ) 手をつなぎたい">
+    </label>
+    
+    <div class="buttons">
+      <div class="lapper">
+      <input class="button" type="submit" value="告白">
+      </div>
+      <div class="lapper">
+      <a href="/" class="button2">戻る</a>
+      </div>
+    </div>
+  </form>
+  </div>
 </div>
