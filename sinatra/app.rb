@@ -69,7 +69,7 @@ get '/conversation/:dir' do
   @target_img = userget(@target_id)[4]
 
   #追加質問リスト
-  p @questions = questionget()
+  p @questions = questiongetlist()
 
   #これまでのconversation
   @conversations = conversationget(@approach[0])
@@ -107,6 +107,7 @@ end
 
 #Answer
 post '/answer' do
-
+  conversationup(@params[:conversation_id],@params[:answer])
+  redirect '/conversation/to'
 end
 
