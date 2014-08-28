@@ -84,6 +84,12 @@ body {
   -webkit-border-radius: 10px;
 }
 
+.topPage .button:active {
+  color: white;
+  background-color: #ef932e;
+}
+
+
 .triangle {
   margin-right: auto;
   margin-left: auto;
