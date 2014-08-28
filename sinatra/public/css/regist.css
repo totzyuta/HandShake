@@ -1,17 +1,22 @@
 /*
+* 白オレンジ         : #ece0d2
+* 黒                : #261a0d
+* 一番目に濃いオレンジ: #ec902e
+* 二番目に濃いオレンジ: #eca052
+* 三番目に濃いオレンジ: #ecb47b
+* 一番目に濃い紫     : #b75fd4
+* 二番目に濃い紫     : #de73e0
+* 三番目に濃い紫     : #d685a6
+* 黒紫              : #4f4549
 
-白: #ece0d2
-一番目に濃いオレンジ: #ec902e
-二番目に濃いオレンジ: #eca052
-三番目に濃いオレンジ: #ecb47b
-黒: #261a0d
-
+* フォーム: #d4c7cc
+* フォームタイトル: #9e9498
 */
 
 .profile {
   position: absolute;
   text-align: center;
-  top: 175px;
+  top: 215px;
   width: 100%;
 }
 
@@ -26,6 +31,11 @@
   color: white;
 }
 
+.firstContents {
+  background-color: #ec902e;
+  height: 290px;
+}
+
 .firstContents .image-container {
   position: absolute;
   width: 100%;
@@ -34,34 +44,34 @@
 
 .firstContents .image {
   display: table;
-  margin-top: 65px;
+  margin-top: 80px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .firstContents .face-out-circle {
   margin: 0px auto;
-  -moz-border-radius: 130;
-  -webkit-border-radius: 130px;
+  -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
   border-radius: 130;
   border: 2px solid #ecb47b;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 
-  height: 105px;
-  width: 105px;
+  height: 130px;
+  width: 130px;
 }
 
 .firstContents .face-out-circle img{
   margin: 0px auto;
   background-size: cover;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
   border-radius: 50px;
 
-  height: 90px;
-  width: 90px;
+  height: 110px;
+  width: 110px;
   border: 5px #eca052 solid;
 }
 
@@ -120,11 +130,6 @@
    -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
-}
-
-
-.image {
-
 }
 
 .secondContents h3 {
