@@ -57,7 +57,7 @@ end
 
 #my_id が target_idに告白する
 def iloveyou(my_id, target_id, handle, point, manifest)
-  sql = 'insert into approaches values(
+  p sql = 'insert into approaches values(
     NULL ,' +
     my_id.to_s + ',' +
     target_id.to_s + ',"' +

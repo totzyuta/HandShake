@@ -1,10 +1,15 @@
 <div class="page">
   <section class="hero love">
     <div class=".face-out-circle">
-      <img style="width: 100px; height:100px" href="<%= @target_img %>">
+      <img style="width: 100px; height:100px" src="<%= @target_img %>">
     </div>
   </section>
-  <input type="text" class="form-control" id="HN" placeholder="Your Kokuhaku Name.">
-  <input type="text" class="form-control" id="Reason" placeholder="Where do you like target.">
-  <input type="text" class="form-control" id="Manifest" placeholder="Your manifest.">
+  <form action="/iloveyou" method="post">
+    <input type="text" name="my_id" value="<%= @my_id %>">
+    <input type="text" name="target_id" value="<%= @target_id %>">
+    <input type="text" class="form-control" name="handle" placeholder="Your Kokuhaku Name.">
+    <input type="text" class="form-control" name="point" placeholder="Where do you like target.">
+    <input type="text" class="form-control" name="manifest" placeholder="Your manifest.">
+    <input type="submit" value="I LOVE YOU">
+  </form>
 </div>
