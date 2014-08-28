@@ -259,11 +259,19 @@
   text-align: center; 
 }
 
-.arrows {
+.arrows-to-right {
   display: table;
   position: absolute;
   top: 180px;
-  left: 140px;
+  left: 141px;
+}
+
+
+.arrows-to-left {
+  display: table;
+  position: absolute;
+  top: 210px;
+  left: 132px;
 }
 
 .arrow {
@@ -272,6 +280,14 @@
   margin-left: auto;
   width: 0;
   height: 0;
+ }
+
+.arrows-to-right .arrow {
   border: 8px solid transparent;
   border-left: 8px solid white;
+}
+
+.arrows-to-left .arrow {
+  border: 8px solid transparent;
+  border-right: 8px solid white; 
 }
