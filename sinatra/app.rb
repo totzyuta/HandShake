@@ -15,6 +15,7 @@ enable :session
 
 #Top Page
 get '/' do
+  #セッションがあったら/mypageに飛ばす
   erb :index
 end
 
@@ -30,7 +31,14 @@ end
 
 #My Page
 get '/mypage' do
-
+  user = userget(session['uid'])
+  @my_img = user[4]
+  target = gettarget(user[0])
+  begin
+    @target_img = userget(target[2])[4]
+  rescue
+    @target_img = ""
+  end
   erb :mypage
 end
 
