@@ -1,6 +1,21 @@
+/*
+* 白オレンジ         : #ece0d2
+* 黒                : #261a0d
+* 一番目に濃いオレンジ: #ec902e
+* 二番目に濃いオレンジ: #eca052
+* 三番目に濃いオレンジ: #ecb47b
+* 一番目に濃い紫     : #b75fd4
+* 二番目に濃い紫     : #de73e0
+* 三番目に濃い紫     : #d685a6
+* 黒紫              : #4f4549
+
+* フォーム: #d4c7cc
+* フォームタイトル: #9e9498
+*/
+
 body {
   color: white;
-  background-color: white;
+  background-color: #ec902e;
 }
 
 .titleBar {
@@ -12,14 +27,14 @@ body {
   float: left;
   margin: 0px;
   margin-left: 5px;
-  margin-top: 8px;
+  margin-top: 5px;
 }
 
 .titleBar p {
-  float: left;
+  float: right;
   margin: 0px;
-  margin-top: 15px;
-  margin-left: 9px;
+  margin-top: 11px;
+  margin-right: 5px;
 }
 
 .titleBar p .small {
@@ -28,10 +43,10 @@ body {
 
 .titleBar .line {
   width: 100%;
-  height: 3px;
+  height: 1px;
   background-color: white;
-  position: absolute;
-  top: 15%
+  position: relative;
+  top: 35px;
 }
 
 .conversation {
@@ -234,3 +249,26 @@ body {
   border-radius: 5px;
 }
 
+.line-out{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-top: 1px;
+  padding-bottom: 1px;
+  top: 170px;
+}
+
+.line-in {
+  border-top: #ec902e solid 1px;
+  border-bottom: #ec902e solid 1px;
+}
+
+.line-in p{
+  position: inherit;
+  z-index: 10;
+  margin: 0px;
+  font-size: 23px;
+  color: #261a0d;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}
