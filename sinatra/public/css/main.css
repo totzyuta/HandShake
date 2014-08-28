@@ -266,7 +266,7 @@ body {
   border-radius: 50px;
 }
 
-.myPage .circle {
+.myPage .secondContents .circle {
   margin: 0px auto;
   -moz-border-radius: 130;
   -webkit-border-radius: 130px;
@@ -275,7 +275,7 @@ body {
   position: absolute;
 }
 
-.myPage .borderCircle {
+.myPage .secondContents .borderCircle {
     margin: 0px auto;
     -moz-border-radius: 130;
     -webkit-border-radius: 130px;
@@ -284,56 +284,56 @@ body {
     position: absolute;
 }
 
-.myPage .circle1 {
+.myPage .firstContents .circle1 {
   height: 20px;
   width: 20px;
   top: 249px;
   left: 77px;
 }
 
-.myPage .circle2 {
+.myPage .firstContents .circle2 {
   height: 23px;
   width: 23px;
   top: 225px;
   left: 51px;
 }
 
-.myPage .circle3 {
+.myPage .firstContents .circle3 {
   height: 30px;
   width: 30px;
   top: 206px;
   left: 81px;
 }
 
-.myPage .circle4 {
+.myPage .firstContents .circle4 {
   height: 33px;
   width: 33px;
   top: 169px;
   left: 75px;
 }
 
-.myPage .circle5 {
+.myPage .firstContents .circle5 {
   height: 40px;
   width: 40px;
   top: 158px;
   left: 118px;
 }
 
-.myPage .circle6 {
+.myPage .firstContents .circle6 {
   height: 30px;
   width: 30px;
   top: 121px;
   left: 114px;
 }
 
-.myPage .circle7 {
+.myPage .firstContents .circle7 {
   height: 45px;
   width: 45px;
   top: 130px;
   left: 160px;
 }
 
-.myPage .circle8 {
+.myPage .firstContents .circle8 {
   height: 55px;
   width: 55px;
   top: 70px;
@@ -341,7 +341,7 @@ body {
 }
 
 
-.slanting {
+.myPage .firstContents .slanting {
   height: 0px;
   width: 0px;
   border: 10px solid transparent;
@@ -352,7 +352,7 @@ body {
   left: 210px;
 }
 
-.slanting2 {
+.myPage .firstContents .slanting2 {
   height: 0px;
   width: 0px;
   border: 10px solid transparent;
@@ -364,7 +364,7 @@ body {
   left: 209px;
 }
 
-.myPage .line  {
+.myPage .firstContents .line  {
   border-top: 1px solid #eee;
   height: 0px;
   width: 100px;
@@ -373,7 +373,7 @@ body {
   left: 210px;
 }
 
-.myPage .circle9 {
+.myPage .firstContents .circle9 {
   height: 20px;
   width: 20px;
   top: 220px;
@@ -381,7 +381,7 @@ body {
   border: 1px solid #eee;
 }
 
-.myPage .triangle {
+.myPage .firstContents .triangle {
   width: 0;
   height: 0;
   border: 8px solid transparent;
@@ -440,6 +440,80 @@ body {
   left: 10px;
 }
 
+.myPage .secondContents .circle {
+  margin: 0px auto;
+  -moz-border-radius: 130;
+  -webkit-border-radius: 130px;
+  border-radius: 130;
+  background-color: #eee;
+  position: absolute;
+}
+
+.myPage .secondContents .borderCircle {
+    margin: 0px auto;
+    -moz-border-radius: 130;
+    -webkit-border-radius: 130px;
+    border-radius: 130;
+    border: 3px solid #eee;
+    position: absolute;
+}
+
+.myPage .secondContents .circle1 {
+  height: 20px;
+  width: 20px;
+  top: 249px;
+  left: 77px;
+}
+
+.myPage .secondContents .circle2 {
+  height: 23px;
+  width: 23px;
+  top: 225px;
+  left: 51px;
+}
+
+.myPage .secondContents .circle3 {
+  height: 30px;
+  width: 30px;
+  top: 206px;
+  left: 81px;
+}
+
+.myPage .secondContents .circle4 {
+  height: 33px;
+  width: 33px;
+  top: 169px;
+  left: 75px;
+}
+
+.myPage .secondContents .circle5 {
+  height: 40px;
+  width: 40px;
+  top: 158px;
+  left: 118px;
+}
+
+.myPage .secondContents .circle6 {
+  height: 30px;
+  width: 30px;
+  top: 121px;
+  left: 114px;
+}
+
+.myPage .secondContents .circle7 {
+  height: 45px;
+  width: 45px;
+  top: 130px;
+  left: 160px;
+}
+
+.myPage .secondContents .circle8 {
+  height: 55px;
+  width: 55px;
+  top: 70px;
+  left: 136px;
+}
+
 .myPage .secondContents .image {
   display: table;
   margin-top: 0px;
@@ -447,8 +521,8 @@ body {
   margin-left: auto;
   margin-bottom: 20px;
   position: absolute;
-  right: -10px;
-  top: 45px;
+  left: -10px;
+  top: 450px;
 }
 
 .myPage .secondContents .face-out-circle {
@@ -458,7 +532,7 @@ body {
     -moz-border-radius: 130px;
     -webkit-border-radius: 130px;
     border-radius: 130px;
-    border: 1px solid #eee;
+    border: 1px solid #ef932e;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -483,15 +557,26 @@ body {
   right: 10px;
 }
 
-.myPage .triangle {
+.myPage .secondContents .circle9 {
+  height: 20px;
+  width: 20px;
+  top: 420px;
+  left: 300px;
+  border: 1px solid #ef932e;
+}
+
+.myPage .secondContents .triangle {
   width: 0;
   height: 0;
   border: 8px solid transparent;
-  border-left: 8px solid #eee;
+  border-left: 8px solid #ef932e;
   position: absolute;
-  top: 222px;
+  top: 422px;
   left: 307px;
 }
+
+
+
 
 
 .myface{
