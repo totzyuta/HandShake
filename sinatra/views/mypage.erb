@@ -74,7 +74,12 @@
     <div class="borderCircle circle8"></div>
     <div class="image">
       <div class="face-out-circle">
-        <img src="">
+        <% if @lover_img == "" %>
+        <a href="/mypage">
+        <% else %>
+        <a href="/conversation/from">
+        <% end %>
+          <img src="<%= @lover_img %>">
       </div>
     </div>
     <div class="slanting"></div>

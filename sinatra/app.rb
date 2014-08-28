@@ -16,6 +16,7 @@ enable :session
 #Top Page
 get '/' do
   #セッションがあったら/mypageに飛ばす
+  #redirect '/mypage' if session['uid'] != nil
   erb :index
 end
 
@@ -31,6 +32,9 @@ end
 
 #My Page
 get '/mypage' do
+  #デバッグ用
+  session['uid'] = params[:uid] if params[:uid] != nil
+
   user = userget(session['uid'])
   @my_img = user[4]
   target = gettarget(user[0])
@@ -38,6 +42,13 @@ get '/mypage' do
     @target_img = userget(target[2])[4]
   rescue
     @target_img = ""
+  end
+
+  lover = getlover(user[0])
+  begin
+    @lover_img = userget(lover[1])[4]
+  rescue
+    @lover_img = ""
   end
   erb :mypage
 end
