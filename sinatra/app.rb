@@ -53,7 +53,27 @@ get '/love' do
 end
 
 #Conversation Page
-get '/conversation' do
+get '/conversation/:dir' do
+  #告白してるとき
+  if params[:dir] == 'to'
+    @approach = gettarget(session['uid'])
+  #告白されてるとき from
+  else
+    @approach = getlover(session['uid'])
+  end
+  @approach_id = @approach[0]
+  @my_id = session['uid']
+  @lover_id = @approach[1]
+  @target_id = @approach[2]
+  @lover_img = userget(@lover_id)[4]
+  @target_img = userget(@target_id)[4]
+
+  #追加質問リスト
+  p @questions = questionget()
+
+  #これまでのconversation
+  @conversations = conversationget(@approach[0])
+
   erb :conversation
 end
 
@@ -82,7 +102,8 @@ end
 
 #Question
 post '/question' do
-
+  conversationadd(@params[:approach_id], @params[:question_id])
+  redirect '/conversation/to'
 end
 
 #Answer

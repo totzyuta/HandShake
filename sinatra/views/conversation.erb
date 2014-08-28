@@ -1,12 +1,41 @@
 <div class="page">
   <h3>やりとり</h3>
   <div class="conversation">
+    <div class=".face-out-circle">
+      <img style="width: 100px; height:100px" src="<%= @target_img %>">
+    </div>
+    <div class=".face-out-circle">
+      <img style="width: 100px; height:100px" src="<%= @lover_img %>">
+    </div>
+
+    <form action="/question" method="post">
+      <input type="text" name="approach_id" value="<%= @approach[0] %>">
+      <select name="question_id">
+      <% @questions.each do |q| %>
+        <option value="<%= q[0] %>"><%= q[1].force_encoding("utf-8") %></option>
+      <% end %>
+      </select>
+      <input type="submit" value="質問">
+    </form>
+
+    <% @conversations.each do |conv| %>
+    <div class="question">
+      <span><%= conv[2] %></span>
+    </div>
+    <% if conv[4] != nil %>
+    <div class="answer">
+      <span><%= conv[4] %></span>
+    </div>
+    <% end %>
+    <% end %>
+
     <div class="question">
       <span>人生とは何ですか？</span>
     </div>
     <div class="answer">
       <span>学ぶことです</span>
     </div>
+    <% %>
   </div>
 
   <div class="conversation">

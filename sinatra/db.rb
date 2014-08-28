@@ -57,7 +57,7 @@ end
 
 #my_id が target_idに告白する
 def iloveyou(my_id, target_id, handle, point, manifest)
-  p sql = 'insert into approaches values(
+  sql = 'insert into approaches values(
     NULL ,' +
     my_id.to_s + ',' +
     target_id.to_s + ',"' +
@@ -67,6 +67,11 @@ def iloveyou(my_id, target_id, handle, point, manifest)
     'now())'
   $db.query sql
 end
+
+#approch_idを照会する
+#def approchget(lover_id, target_id)
+#  sql = 'select * from approaches where'
+#end
 
 #my_idが告白してる人
 def gettarget(my_id)
@@ -94,6 +99,17 @@ def questionadd(body)
   $db.query sql
 end
 
+#質問のリストを取る
+def questionget()
+  sql = 'select * from questions'
+  rs = $db.query sql
+  result = []
+  rs.each{|col|
+    result << col#.join("\t")
+  }
+  return result
+end
+
 #質問を送る
 def conversationadd(approach_id, question_id)
   sql = 'insert into conversations values(
@@ -114,10 +130,12 @@ def conversationup(conversation_id, answer)
 end
 
 #質問を照会
-def conversationget(conversation_id)
-  sql = 'select * from conversations where conversation_id = "' + conversation_id.to_s + '"'
+def conversationget(approach_id)
+  sql = 'select * from conversations where approach_id = "' + approach_id.to_s + '"'
   rs = $db.query sql
+  result = []
   rs.each{|col|
-    return col#.join("\t")
+    reslut << col#.join("\t")
   }
+  return reslut
 end

@@ -75,8 +75,8 @@ end
 
 #
 iloveyou(1,3,"","","")
-#p gettarget(1)
-#p getlover(3)
+p gettarget(1)
+p getlover(3)
 
 #Questions
 questionadd("好きな食べ物は？")
