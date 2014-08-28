@@ -167,6 +167,7 @@ body {
   left: -65px;
 }
 
+/* footer */
 .footer {
   text-align: center;
   background-color: #ec902e;
@@ -174,6 +175,13 @@ body {
   width: 100%;
   position: fixed;
   bottom: 0px;
+}
+
+.text {
+  width: 200px;
+  height: 22px;
+  border-color: white;
+  margin-left: 20px;
 }
 
 .selection {
