@@ -20,6 +20,12 @@ get '/' do
   erb :index
 end
 
+#デバッグ用 session 付ける
+get '/session/:uid' do
+  session[:uid] = params[:uid]
+  redirect '/mypage'
+end
+
 #Sign up Page
 get '/regist' do
   session['uid'] = rand(10)+1
@@ -114,8 +120,11 @@ get '/conversation/:dir' do
   @my_id = session['uid']
   @lover_id = @approach[1]
   @target_id = @approach[2]
-  @lover_img = userget(@lover_id)[4]
-  @target_img = userget(@target_id)[4]
+  lover = userget(@lover_id)
+  target = userget(@target_id)
+  @lover_img = lover[4]
+  @target_img = target[4]
+  @target_name = target[1]
 
   #追加質問リスト
   @questions = questiongetlist()
@@ -126,13 +135,20 @@ get '/conversation/:dir' do
   if params[:dir] == 'to'
     erb :conversation_to
   elsif params[:dir] == 'from'
+    @lover_img = '/images/unknown.png'
     erb :conversation_from
   else
   end
 end
 
+#恋愛度MAX，最後の告白
 get '/lovemax' do
   erb :lovemax
+end
+
+#告白の返事
+get '/return' do
+  erb :return
 end
 
 get '/question' do
@@ -161,12 +177,12 @@ end
 #Question
 post '/question' do
   conversationadd(@params[:approach_id], @params[:question_id])
-  redirect '/conversation/to'
+  redirect '/mypage'
 end
 
 #Answer
 post '/answer' do
   conversationup(@params[:conversation_id],@params[:answer])
-  redirect '/conversation/to'
+  redirect '/mypage'
 end
 
