@@ -233,20 +233,6 @@ body {
   top: -80px;
 }
 
-.target{
-  height: 200px;
-  width: 100%;
-  background-color: #ef932e;
-  display: block;
-}
-
-.lover{
-  height: 200px;
-  width: 100%;
-  background-color: #ece0d2;
-  display: block;
-}
-
 .conversation{
   background-color: #ece0d2;
 }
