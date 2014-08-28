@@ -3,6 +3,8 @@
   <div class="firstContents">
     <!-- 上画面：告白していない -->
     <% if @target_img == "" %>
+
+    <div class="anim-line"></div>
     <a href="/select">
       <div class="cover">
         <div class="line-out">
@@ -77,7 +79,7 @@
     <% if @target_img != "" %>
     <div class="anim1">
       <div class="anim-mask1">
-        <div class="borderCircle anim-circle"></div>
+        <div class="anim-circle"></div>
       </div>
     </div>
     <% end %>

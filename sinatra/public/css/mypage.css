@@ -568,17 +568,18 @@
   text-align: center;
 }
 
+/* アニメーション */
+
 .anim1 {
   position: absolute;
   top: 50px;
-  left: 200px;;
+  left: 200px;
   width: 120px;
   height: 120px;
   overflow: hidden;
 }
 
 .anim-mask1 {
-  background: blue;
   position: relative;
   top: 10px;
   left: 50px;
@@ -587,7 +588,7 @@
 .anim2 {
   position: absolute;
   top: 410px;
-  left: 0px;;
+  left: 0px;
   width: 120px;
   height: 120px;
   overflow: hidden;
@@ -621,4 +622,15 @@
 
 .anim2 .anim-circle2 {
   border-color: #ec902e;
+}
+
+
+.anim-line {
+  position: absolute;
+  height: 52px;
+  width: 100%;
+  border-top: 3px solid #ec902e;
+  border-bottom: 3px solid #ec902e;
+  top: 146px;
+  z-index: 12;
 }
