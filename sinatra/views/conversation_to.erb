@@ -2,12 +2,14 @@
 <div class="page">
   <div class="titleBar">
     <h3>Questions</h3>
-    <p>You&nbsp;<span class="small">&#x25B6;&#x25B6;</span>&nbsp;Natsuki<p>
+    <p>You&nbsp;<span class="small">&#x25B6;&#x25B6;</span>&nbsp;<%= @target_name %><p>
     <div class="line"></div>
   </div>
 
+  <% @conversations.each do |conv| %>
+  <% @cid = conv[0] %>
   <div class="conversation">
-    <h4>Question1.</h4>
+    <h4>Question.</h4>
     <div class="wrapper">
       <div class="image">
         <div class="targetimg">
@@ -26,7 +28,6 @@
         </div>
       </div>
 
-      <% @conversations.each do |conv| %>
       <div class="question">
         <span><%= conv[1].force_encoding("utf-8") %></span>
       </div>
@@ -39,17 +40,17 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 
-    <!-- 3回質問したら聞かない -->
+  <!-- 3回質問したら聞かない -->
 
   <!-- 告白した側：解答フォーム -->
   <div class="footer">
-      <form action="/answer" method="post">
-        <input type="hidden" name="conversation_id" value="<%= conv[0] %>">
-      <% end %>
-        <input type="text" name="answer" class="text">
-        <input type="submit" value="答える" class="button">
-      </form>
+    <form action="/answer" method="post">
+      <input type="hidden" name="conversation_id" value="<%= @cid %>">
+      <input type="text" name="answer" class="text">
+      <input type="submit" value="答える" class="button">
+    </form>
   </div>
 
   <div class="conversation">

@@ -1,0 +1,293 @@
+/*
+* 白オレンジ         : #ece0d2
+* 黒                : #261a0d
+* 一番目に濃いオレンジ: #ec902e
+* 二番目に濃いオレンジ: #eca052
+* 三番目に濃いオレンジ: #ecb47b
+
+* 一番目に濃い紫     : #b75fd4
+* 二番目に濃い紫     : #de73e0
+* 三番目に濃い紫     : #d685a6
+* 黒紫              : #4f4549
+
+* フォーム: #d4c7cc
+* フォームタイトル: #9e9498
+*/
+
+.page {
+  background-color: white;
+  display: block;
+}
+
+.love-target-face {
+  width: 200px;
+  margin: 0px auto;
+}
+
+.face-out-circle {
+  margin: 0px auto;
+  -moz-border-radius: 130;
+  -webkit-border-radius: 130px;
+  border-radius: 130;
+  border: 2px solid #d685a6;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+  height: 90px;
+  width: 90px;
+}
+
+.face-out-circle img{
+  margin: 0px auto;
+  background-size: cover;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+
+  height: 70px;
+  width: 70px;
+  border: 5px #de73e0 solid;
+}
+
+.firstContents {
+  background: #b75fd4;
+}
+
+.firstContents .image-container {
+  top: 20px;
+  position: relative;
+  width: 50%;
+  text-align: center;
+  z-index: 5;
+}
+
+.firstContents .image-container p {
+  position: relative;
+  color: white;
+  top: 5px; 
+  font-size: 15px;
+  z-index: 6;
+}
+
+.firstContents .borderCircle {
+  margin: 0px auto;
+  -moz-border-radius: 130px;
+  -webkit-border-radius: 130px;
+  border-radius: 80px;
+  border: 1px solid #d685a6;
+  position: absolute;
+}
+
+.firstContents .circle {
+  margin: 0px auto;
+  -moz-border-radius: 130;
+  -webkit-border-radius: 130px;
+  border-radius: 130;
+  background-color: #de73e0;
+  position: absolute;
+}
+
+.firstContents .image {
+  display: table;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.firstContents .circle1 {
+  height: 65px;
+  width: 65px;
+  top: 5px;
+  left: 5px;
+}
+
+.firstContents .circle2 {
+  height: 27px;
+  width: 27px;
+  top: 30px;
+  left: 110px;
+}
+
+.firstContents .circle3 {
+  height: 15px;
+  width: 15px;
+  top: 55px;
+  left: 10px;
+}
+
+.firstContents .circle4 {
+  height: 20px;
+  width: 20px;
+  top: 115px;
+  left: 110px;
+}
+
+.firstContents .circle5 {
+  height: 30px;
+  width: 30px;
+  top: 130px;
+  left: 40px;
+}
+
+
+.secondContents label{
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.profile {
+  position: absolute;
+  text-align: center;
+  top: 220px;
+  width: 100%;
+}
+
+.profile .name{
+  font-size: 24px;
+  color: white;
+}
+
+.profile .email{
+  font-size: 13px;
+  font-weight: 200;
+  color: white;
+}
+
+.secondContents form p {
+  margin: 0px;
+  margin-bottom: 5px;
+  color: #9e9488;
+}
+
+.secondContents form textarea {
+  width: 280px;
+  height: 150px;
+  border: none;
+  background-color: #d4c7cc;
+  box-shadow: none;
+  border-radius: 0px;
+  color: #4f4549;
+}
+
+.secondContents .buttons {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 15px 0;
+  vertical-align: middle;
+  height: 50px;
+  text-align: center;
+}
+
+
+.secondContents .lapper {
+  display: table-cell;
+  margin: 0px;
+  padding: 0px;
+}
+
+.secondContents .button {
+  display: block;
+  color: #b75fd4;
+  font-size: 18px;
+  background-color: white;
+  width: 120px;
+  height: 50px;
+
+  padding-top: 12px;
+  padding-bottom: 10px;
+  border: solid;
+  border-width: 1px;
+  border-color: #b75fd4;
+ 
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.secondContents .button2 {
+  display: block;
+  color: white;
+  font-size: 18px;
+
+  width: 70px;
+  height: 45px;
+
+  background-color: #b75fd4;
+  padding-top: 10px;
+  margin-top: 0px;
+
+  border: none;
+  border-width: 1px;
+  /* for chrome, safari */
+   -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.float-left{
+  float: left;
+}
+
+.float-right{
+  float: right;
+}
+
+.firstContents .line-out{
+  position: relative;
+  top: 14px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.firstContents .line-in {
+  border-top: #b75fd4 solid 1px;
+  border-bottom: #b75fd4 solid 1px;
+  padding: 3px;
+}
+
+.firstContents .line-in p{
+  z-index: 10;
+  margin: 0px;
+  font-size: 17px;
+  color: white;
+  padding-top: 1px;
+  text-align: center; 
+}
+
+.arrows-to-right {
+  display: table;
+  position: absolute;
+  top: 180px;
+  left: 141px;
+}
+
+
+.arrows-to-left {
+  display: table;
+  position: absolute;
+  top: 210px;
+  left: 132px;
+}
+
+.arrow {
+  display: table-cell;
+  margin-right: auto;
+  margin-left: auto;
+  width: 0;
+  height: 0;
+ }
+
+.arrows-to-right .arrow {
+  border: 8px solid transparent;
+  border-left: 8px solid white;
+}
+
+.arrows-to-left .arrow {
+  border: 8px solid transparent;
+  border-right: 8px solid white; 
+}
