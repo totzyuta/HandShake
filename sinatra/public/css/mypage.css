@@ -190,8 +190,8 @@
   border-top: 7px solid #ecb47b;
   border-left: 7px solid #ecb47b;
   position: absolute;
-  top: 134px;
-  left: 229px;
+  top: 133px;
+  left: 242px;
   z-index: 4;
 }
 
@@ -204,7 +204,7 @@
   z-index: 5;
   position: absolute;
   top: 133px;
-  left: 228px;
+  left: 241px;
   z-index: 4;
 
 }
@@ -214,8 +214,8 @@
   height: 0px;
   width: 75px;
   position: absolute;
-  top: 117px;
-  left: 230px;
+  top: 116px;
+  left: 242px;
 }
 
 .firstContents .circle9 {
