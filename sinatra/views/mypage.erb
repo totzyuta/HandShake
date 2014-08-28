@@ -2,20 +2,21 @@
 <section class="myPage">
   <div class="firstContents">
     <!-- 上画面：告白していない -->
-    <!--
-    <div class="lines">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-    <div class="target-face">
-      <div class="regist-face">
+    <% if @target_img == "" %>
+    <a href="/select">
+      <div class="cover">
+        <div class="line-out">
+          <div class="line-in">
+            <p>
+              告白相手を選んでください
+              <div class="triangle to-select1"></div>
+              <div class="triangle to-select2"></div>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="hero target">
-    </div>
-    -->
+    </a>
+    <% end%>
 
     <!-- 上画面：告白している -->
     <p><span class="strong">3</span>Days</p>
@@ -33,8 +34,8 @@
         <a href="/select">
         <% else %>
         <a href="/conversation/to">
-        <% end %>
           <img src="<%= @target_img %>">
+        <% end %>
         </a>
       </div>
     </div>
@@ -44,7 +45,7 @@
     <div class="borderCircle circle9"></div>
     <div class="triangle"></div>
     <div class="strong pct">
-      <p>90%</p>
+      <p><%= @target_progress %></p>
     </div>
   </div>
 
@@ -58,11 +59,21 @@
 
   <div class="secondContents">
     <!-- 下画面：告白されていない -->
-
+    <% if @lover_img == "" %>
+    <div class="cover">
+      <div class="line-out">
+        <div class="line-in">
+          <p>
+            告白されていません
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
 
     <!-- 下画面：告白されている -->
     <div class="strong pct">
-      <p>80%</p>
+      <p><%= @lover_progress %></p>
     </div>
     <div class="borderCircle circle1"></div>
     <div class="circle circle2"></div>
@@ -78,8 +89,8 @@
         <a href="/mypage">
         <% else %>
         <a href="/conversation/from">
-        <% end %>
           <img src="<%= @lover_img %>">
+        <% end %>
       </div>
     </div>
     <div class="slanting"></div>
