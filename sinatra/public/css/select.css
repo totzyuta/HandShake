@@ -19,15 +19,6 @@ body {
   font-size: 30px;
 }
 
-.glass {
-  height: 40px;
-  width: 40px;
-  background-color: white;
-  float: left;
-  margin-left: 10px;
-  margin-right: 5px;
-}
-
 input[type=name] {
   width: 220px;
   height: 40px;
@@ -87,7 +78,7 @@ input[type=name]:focus {
   height: 50px;
   text-align: center;
   background-color: #ecb47b;
-  margin-top: 45px;
+  margin-top: 100px;
 }
 
 .bar .line {
