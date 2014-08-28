@@ -221,6 +221,6 @@
 .secondContents .button2:active {
   color: #b75fd4;
   background-color: white;
-  border-color: #b75fd4;
+  border: 1px #b75fd4 solid;
 }
 
