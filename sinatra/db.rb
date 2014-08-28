@@ -65,7 +65,19 @@ def iloveyou(my_id, target_id, handle, point, manifest)
     handle + '","' +
     point + '","' +
     manifest + '",' +
-    'now())'
+    'now(),
+    0,
+    "",
+    "")'
+  $db.query sql
+end
+
+# 最終告白をする
+def iloveyoufinal(approach_id, main)
+  sql = 'update approaches set
+    main = "' + main + '",
+    status = 2
+    where approach_id = "' + approach_id.to_s + '"'
   $db.query sql
 end
 
