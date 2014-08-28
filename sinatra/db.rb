@@ -4,6 +4,7 @@ require 'mysql'
 require 'date'
 
 $db = Mysql::connect('localhost', ENV['DB_HANDSHAKE'] , ENV['DB_HANDSHAKE_PASS'], 'handshake')
+#$db.charset = 'utf8'
 
 def DBconsole(query)
  rs = $db.query query
@@ -99,8 +100,17 @@ def questionadd(body)
   $db.query sql
 end
 
+#質問を取る
+def questionget(question_id)
+  sql = 'select * from questions where question_id = ' + question_id.to_s
+  rs = $db.query sql
+  rs.each{|col|
+    return col[1]#.join("\t")
+  }
+end
+
 #質問のリストを取る
-def questionget()
+def questiongetlist()
   sql = 'select * from questions'
   rs = $db.query sql
   result = []
@@ -135,7 +145,7 @@ def conversationget(approach_id)
   rs = $db.query sql
   result = []
   rs.each{|col|
-    result << col#.join("\t")
+    result << [col[0], questionget(col[2]), col[2], col[3], col[4], col[5]]#.join("\t")
   }
   return result
 end

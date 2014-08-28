@@ -1,12 +1,5 @@
 <div class="page">
   <h3>やりとり</h3>
-  <div class="conversation">
-    <div class=".face-out-circle">
-      <img style="width: 100px; height:100px" src="<%= @target_img %>">
-    </div>
-    <div class=".face-out-circle">
-      <img style="width: 100px; height:100px" src="<%= @lover_img %>">
-    </div>
 
     <form action="/question" method="post">
       <input type="text" name="approach_id" value="<%= @approach[0] %>">
@@ -18,24 +11,35 @@
       <input type="submit" value="質問">
     </form>
 
-    <% @conversations.each do |conv| %>
-    <div class="question">
-      <span><%= conv[2] %></span>
+  <div class="conversation">
+    <div class=".face-out-circle">
+      <img style="width: 100px; height:100px" src="<%= @target_img %>">
     </div>
-    <% if conv[4] != nil %>
+    <div class=".face-out-circle">
+      <img style="width: 100px; height:100px" src="<%= @lover_img %>">
+    </div>
+
+    <% @conversations.each do |conv| %>
+
+    <div class="question">
+      <span><%= conv[1].force_encoding("utf-8") %></span>
+    </div>
+    <%= conv %>
+    <% if conv[4] == nil %>
+      <form action="/answer" method="post">
+        <input type="text" name="conversation_id" value="<%= conv[0] %>">
+        <input type="text" name="answer">
+        <input type="submit" value="答える">
+      </form>
+    <% else %>
     <div class="answer">
-      <span><%= conv[4] %></span>
+      <span><%= conv[4].force_encoding("utf-8") %></span>
     </div>
     <% end %>
     <% end %>
 
-    <div class="question">
-      <span>人生とは何ですか？</span>
-    </div>
-    <div class="answer">
-      <span>学ぶことです</span>
-    </div>
-    <% %>
+    <!-- 3回質問したら聞かない -->
+
   </div>
 
   <div class="conversation">
