@@ -39,7 +39,7 @@ db.query 'create table approaches (
   status int,
   main text,
   response text)'
-  #status = wait, running, check, final, finish
+  #status = 0:wait, 1:running, 2:check, 3:success, 4:miss
 
 db.query 'create table questions (
   question_id int not null auto_increment primary key,
