@@ -18,6 +18,22 @@
     </a>
     <% end%>
 
+    <% if @target_progress == "90%" %>
+    <a href="/lovemax">
+      <div class="cover">
+        <div class="line-out">
+          <div class="line-in">
+            <p>
+              本番告白に望みましょう
+              <div class="triangle to-select1"></div>
+              <div class="triangle to-select2"></div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <% end %>
+
     <!-- 上画面：告白している -->
     <p><span class="strong">3</span>Days</p>
     <div class="borderCircle circle1"></div>
@@ -49,7 +65,7 @@
     <div class="strong pct">
     <div class="target_name">
       <h5>ななしさん
-      <!-- 拾えないtaget_name... 
+      <!-- 拾えないtaget_name...
       <%= @target_name %>
       --> </h5>
     </div>
@@ -73,6 +89,18 @@
         <div class="line-in">
           <p>
             告白されていません
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+    <% if @lover_progress == "90%" %>
+    <div class="cover">
+      <div class="line-out">
+        <div class="line-in">
+          <p>
+            本番告白を待っています
           </p>
         </div>
       </div>

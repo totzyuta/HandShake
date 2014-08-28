@@ -13,22 +13,22 @@
         </p>
       </div>
     </div>
-    <div class="image-container float-right">
-      <div class="image">
-        <div class="face-out-circle">
-          <img src="<%= @target_img %>">
-        </div>
-      </div>
-      <p>Target Name</p>
-    </div>
-
     <div class="image-container float-left">
       <div class="image">
         <div class="face-out-circle">
           <img src="<%= @target_img %>">
         </div>
       </div>
-      <p>Target Name</p>
+      <p><%= @target_name %></p>
+    </div>
+
+    <div class="image-container float-right">
+      <div class="image">
+        <div class="face-out-circle">
+          <img src="<%= @user_img %>">
+        </div>
+      </div>
+      <p><%= @user_name %></p>
       <div class="borderCircle circle1"></div>
       <div class="borderCircle circle2"></div>
       <div class="circle circle3"></div>
@@ -37,14 +37,13 @@
     </div>
   </div>
   <div class="secondContents">
-    <form action="/iloveyou" method="post">
+    <form action="/iloveyoufinal" method="post">
 
-    <input type="hidden" name="my_id" value="<%= @my_id %>">
-    <input type="hidden" name="target_id" value="<%= @target_id %>">
+    <input type="hidden" name="approach_id" value="<%= @approach_id %>">
 
     <label>
     <p>メッセージ</p>
-    <textarea type="text" class="form-control" name="handle" ></textarea>
+    <textarea type="text" class="form-control" name="main" ></textarea>
     </label>
 
     <div class="buttons">
