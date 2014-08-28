@@ -40,10 +40,7 @@ input[type=name] {
   border-radius: 0px;
   border: 3px solid #ecb47b;
   float: left;
-}
-
-input[type=name]:focus {
-     border:solid 1px white;
+  box-shadow: none;
 }
 
 .selectPage .select {
@@ -122,8 +119,6 @@ input[type=name]:focus {
 }
 
 .box input:focus {
+  box-shadow: none;
   border-color: #ecb47b;
-  -webkit-box-shadow: 0px 0px 6px white;
-  outline:none;
 }
-
