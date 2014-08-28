@@ -145,7 +145,7 @@ def conversationget(approach_id)
   rs = $db.query sql
   result = []
   rs.each{|col|
-    result << [col[0], questionget(col[1]), col[2], col[3], col[4], col[5]]#.join("\t")
+    result << [col[0], questionget(col[2]), col[2], col[3], col[4], col[5]]#.join("\t")
   }
   return result
 end
