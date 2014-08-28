@@ -82,6 +82,7 @@
   position: relative;
   top: -10px;
   right: -10px;
+  z-index: 10;
 }
 
 .firstContents .face-out-circle {
@@ -186,25 +187,25 @@
 .firstContents .slanting {
   height: 0px;
   width: 0px;
-  border: 7px solid transparent;
-  border-top: 7px solid #ecb47b;
-  border-left: 7px solid #ecb47b;
+  border: 10px solid transparent;
+  border-top: 10px solid #ecb47b;
+  border-left: 10px solid #ecb47b;
   position: absolute;
-  top: 133px;
-  left: 242px;
+  top: 80px;
+  left: 15px;
   z-index: 4;
 }
 
 .firstContents .slanting2 {
-  height: 0px37;
+  height: 0px;
   width: 0px;
-  border: 7px solid transparent;
-  border-top: 7px solid #ef932e;
-  border-left: 7px solid #ef932e;
+  border: 10px solid transparent;
+  border-top: 10px solid #ef932e;
+  border-left: 10px solid #ef932e;
   z-index: 5;
   position: absolute;
-  top: 133px;
-  left: 241px;
+  top: 79px;
+  left: 14px;
   z-index: 4;
 
 }
@@ -212,10 +213,10 @@
 .firstContents .line  {
   border-top: 1px solid #ecb47b;
   height: 0px;
-  width: 75px;
+  width: 80px;
   position: absolute;
-  top: 116px;
-  left: 242px;
+  top: 69px;
+  left: 15px;
 }
 
 .firstContents .circle9 {
