@@ -16,7 +16,7 @@ enable :session
 #Top Page
 get '/' do
   #セッションがあったら/mypageに飛ばす
-  #redirect '/mypage' if session['uid'] != nil
+  redirect '/mypage' if session['uid'] != nil
   erb :index
 end
 
@@ -35,6 +35,7 @@ get '/mypage' do
   #デバッグ用
   session['uid'] = params[:uid] if params[:uid] != nil
 
+  #告白している方
   user = userget(session['uid'])
   @my_img = user[4]
   target = gettarget(user[0])
@@ -44,6 +45,7 @@ get '/mypage' do
     @target_img = ""
   end
 
+  #告白されている方
   lover = getlover(user[0])
   begin
     @lover_img = userget(lover[1])[4]
@@ -56,7 +58,6 @@ end
 #Select Page
 get '/select' do
   @friends_ids = []
-  p session['uid']
   friendget(session['uid']).each do |id|
     @friends_ids << [id,userget(id)[4]]
   end
@@ -88,7 +89,7 @@ get '/conversation/:dir' do
   @target_img = userget(@target_id)[4]
 
   #追加質問リスト
-  p @questions = questiongetlist()
+  @questions = questiongetlist()
 
   #これまでのconversation
   @conversations = conversationget(@approach[0])
@@ -103,17 +104,17 @@ end
 post '/useradd' do
   p params[:Name]
   p params[:Email]
-  session['uid'] = rand(4)
+  #session['uid'] = rand(4)
   redirect "/mypage"
 end
 
 #I love You
 post '/iloveyou' do
-  p my_id = @params[:my_id]
-  p target_id = @params[:target_id]
-  p handle = @params[:handle]
-  p point = @params[:point]
-  p manifest = @params[:manifest]
+  my_id = @params[:my_id]
+  target_id = @params[:target_id]
+  handle = @params[:handle]
+  point = @params[:point]
+  manifest = @params[:manifest]
   iloveyou(my_id, target_id, handle, point, manifest)
   redirect '/mypage'
 end
