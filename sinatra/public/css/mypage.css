@@ -191,8 +191,8 @@
   border-top: 10px solid #ecb47b;
   border-left: 10px solid #ecb47b;
   position: absolute;
-  top: 80px;
-  left: 15px;
+  top: 130px;
+  left: 230px;
   z-index: 4;
 }
 
@@ -204,8 +204,8 @@
   border-left: 10px solid #ef932e;
   z-index: 5;
   position: absolute;
-  top: 79px;
-  left: 14px;
+  top: 129px;
+  left: 229px;
   z-index: 4;
 
 }
@@ -215,8 +215,8 @@
   height: 0px;
   width: 80px;
   position: absolute;
-  top: 69px;
-  left: 15px;
+  top: 120px;
+  left: 230px;
 }
 
 .firstContents .circle9 {
@@ -244,6 +244,14 @@
   position: absolute;
   top: 190px;
   right: 3px;
+}
+
+.target_name  h5 { 
+  color: #ece0d2;
+  font-size: 14px;
+  position: absolute;
+  top: 146px;
+  right: 16px;
 }
 
 /* Middle Contents from Here */
