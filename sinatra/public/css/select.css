@@ -117,3 +117,27 @@ input[type=name] {
   box-shadow: none;
   border-color: #ecb47b;
 }
+
+.line-out{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-top: 1px;
+  padding-bottom: 1px;
+  top: 170px;
+}
+
+.line-in {
+  border-top: #ec902e solid 1px;
+  border-bottom: #ec902e solid 1px;
+}
+
+.line-in p{
+  position: inherit;
+  z-index: 10;
+  margin: 0px;
+  font-size: 23px;
+  color: #261a0d;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}
