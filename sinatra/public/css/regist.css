@@ -136,7 +136,7 @@ a.touchstart {
   border-radius: 8px;
 }
 
-.secondContents .button2:active {
+a.touchstart {
   border-color: #ef932e;
   color: #ef932e;
   background-color: white;
