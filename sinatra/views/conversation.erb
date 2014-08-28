@@ -7,35 +7,46 @@
   </div>
     
   <div class="conversation">
-    <div class=".face-out-circle">
-      <img style="width: 100px; height:100px" src="<%= @target_img %>">
-    </div>
-    <div class=".face-out-circle">
-      <img style="width: 100px; height:100px" src="<%= @lover_img %>">
-    </div>
+    <h4>Question1.</h4>
+    <div class="wrapper">
+      <div class="image">
+        <div class="targetimg">
+          <div class="face-out-circle">
+            <img src="<%= @target_img %>">
+          </div>
+          <div class="slanting"></div>
+          <div class="slanting2"></div>
+          <div class="line"></div>
+        </div>
+        <div class="loverimg">
+          <img class="loverimg" src="<%= @lover_img %>">
+          <div class="slanting"></div>
+          <div class="slanting2"></div>
+          <div class="line"></div>
+        </div>
+      </div>
 
-    <% @conversations.each do |conv| %>
-
-    <div class="question">
-      <span><%= conv[1].force_encoding("utf-8") %></span>
+      <% @conversations.each do |conv| %>
+      <div class="question">
+        <span><%= conv[1].force_encoding("utf-8") %></span>
+      </div>
+      <% if conv[4] == nil %>
+        <form action="/answer" method="post">
+          <input type="text" name="conversation_id" value="<%= conv[0] %>">
+          <input type="text" name="answer">
+          <input type="submit" value="答える">
+        </form>
+      <% else %>
+      <div class="answer">
+        <span><%= conv[4].force_encoding("utf-8") %></span>
+      </div>
+      <% end %>
+      <% end %>
     </div>
-    <%= conv %>
-    <% if conv[4] == nil %>
-      <form action="/answer" method="post">
-        <input type="text" name="conversation_id" value="<%= conv[0] %>">
-        <input type="text" name="answer">
-        <input type="submit" value="答える">
-      </form>
-    <% else %>
-    <div class="answer">
-      <span><%= conv[4].force_encoding("utf-8") %></span>
-    </div>
-    <% end %>
-    <% end %>
+  </div>
 
     <!-- 3回質問したら聞かない -->
 
-  </div>
   <!-- 告白した側：解答フォーム -->
 
   <!-- 告白された側：質問フォーム -->
