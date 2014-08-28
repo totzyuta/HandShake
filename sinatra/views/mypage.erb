@@ -29,22 +29,30 @@
     <div class="borderCircle circle7"></div>
     <div class="circle circle8"></div>
     <div class="image">
-      <div class="face-out-circle">
-        <% if @target_img == "" %>
-        <a href="/select">
-        <% else %>
-        <a href="/conversation/to">
-          <img src="<%= @target_img %>">
-        <% end %>
-        </a>
+      <div class="mask">
+        <div class="face-out-circle">
+          <% if @target_img == "" %>
+          <a href="/select">
+            <img src="/images/unknown.png">
+          </a>
+          <% else %>
+          <a href="/conversation/to">
+            <img src="<%= @target_img %>">
+          </a>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="slanting"></div>
     <div class="slanting2"></div>
     <div class="line"></div>
-    <div class="borderCircle circle9"></div>
-    <div class="triangle"></div>
     <div class="strong pct">
+    <div class="target_name">
+      <h5>ななしさん
+      <!-- 拾えないtaget_name... 
+      <%= @target_name %>
+      --> </h5>
+    </div>
       <p><%= @target_progress %></p>
     </div>
   </div>
@@ -84,20 +92,20 @@
     <div class="circle circle7"></div>
     <div class="borderCircle circle8"></div>
     <div class="image">
-      <div class="face-out-circle">
-        <% if @lover_img == "" %>
-        <a href="/mypage">
-        <% else %>
-        <a href="/conversation/from">
-          <img src="<%= @lover_img %>">
-        <% end %>
+      <div class="mask">
+        <div class="face-out-circle">
+          <% if @lover_img == "" %>
+            <img src="/images/unknown.png">
+          <% else %>
+          <a href="/conversation/from">
+            <img src="/images/unknown.png">
+          </a>
+          <% end %>
+        </div>
       </div>
-    </div>
     <div class="slanting"></div>
     <div class="slanting2"></div>
     <div class="line"></div>
-    <div class="borderCircle circle9"></div>
-    <div class="triangle"></div>
     <p><span class="strong">12</span>Hours</p>
 
   </div>

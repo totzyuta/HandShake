@@ -13,16 +13,6 @@
 * フォームタイトル: #9e9498
 */
 
-html {
-  width: 640px;
-  height: 100%;
-}
-
-body {
-  width: 640px;
-  overflow: hidden;
-}
-
 .page{
   margin: 50px auto 20px;
   border-top: 1px solid #ccc;
@@ -82,8 +72,17 @@ body {
   margin-left: auto;
   margin-bottom: 20px;
   position: absolute;
+  right: 0px;
+  top: 50px;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.firstContents .mask {
+  position: relative;
+  top: -10px;
   right: -10px;
-  top: 45px;
+  z-index: 10;
 }
 
 .firstContents .face-out-circle {
@@ -188,33 +187,36 @@ body {
 .firstContents .slanting {
   height: 0px;
   width: 0px;
-  border: 7px solid transparent;
-  border-top: 7px solid #ecb47b;
-  border-left: 7px solid #ecb47b;
+  border: 10px solid transparent;
+  border-top: 10px solid #ecb47b;
+  border-left: 10px solid #ecb47b;
   position: absolute;
-  top: 136px;
-  left: 238px;
+  top: 130px;
+  left: 230px;
+  z-index: 4;
 }
 
 .firstContents .slanting2 {
-  height: 0px37;
+  height: 0px;
   width: 0px;
-  border: 7px solid transparent;
-  border-top: 7px solid #ef932e;
-  border-left: 7px solid #ef932e;
+  border: 10px solid transparent;
+  border-top: 10px solid #ef932e;
+  border-left: 10px solid #ef932e;
   z-index: 5;
   position: absolute;
-  top: 135px;
-  left: 237px;
+  top: 129px;
+  left: 229px;
+  z-index: 4;
+
 }
 
 .firstContents .line  {
   border-top: 1px solid #ecb47b;
   height: 0px;
-  width: 75px;
+  width: 80px;
   position: absolute;
-  top: 119px;
-  left: 238px;
+  top: 120px;
+  left: 230px;
 }
 
 .firstContents .circle9 {
@@ -242,6 +244,14 @@ body {
   position: absolute;
   top: 190px;
   right: 3px;
+}
+
+.target_name  h5 { 
+  color: #ece0d2;
+  font-size: 14px;
+  position: absolute;
+  top: 146px;
+  right: 16px;
 }
 
 /* Middle Contents from Here */
@@ -368,8 +378,16 @@ body {
   margin-left: auto;
   margin-bottom: 20px;
   position: absolute;
+  left: 0px;
+  top:430px;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.secondContents .mask {
+  position: relative;
+  top: 10px;
   left: -10px;
-  top: 440px;
 }
 
 .secondContents .face-out-circle {
@@ -400,33 +418,34 @@ body {
   height: 0px;
   width: 0px;
   border: 7px solid transparent;
-  border-bottom: 7px solid #ec902e;
-  border-left: 7px solid #ec902e;
+  border-top: 7px solid #ec902e;
+  border-right: 7px solid #ec902e;
   position: absolute;
   top: 512px;
-  left: 85px;
+  left: 84px;
 }
 
 .secondContents .slanting2 {
   height: 0px;
   width: 0px;
   border: 7px solid transparent;
-  border-bottom: 7px solid white;
-  border-left: 7px solid white;
+  border-top: 7px solid white;
+  border-right: 7px solid white;
   z-index: 5;
   position: absolute;
-  top: 513px;
-  left: 83px;
-  background-color: none;
+  top: 511px;
+  left: 85px;
+  z-index: 3;
 }
 
 .secondContents .line {
   width: 67px;
-  border-top: 2px solid #ec902e;
+  border-top: 1px solid #ec902e;
   float: left;
   position: absolute;
   top: 525px;
   left: 97px;
+  z-index: 4;
 }
 
 .secondContents p {
@@ -489,7 +508,7 @@ body {
   font-size: 23px;
   color: #261a0d;
   padding-left: 15px;
-  padding-top: 3px; 
+  padding-top: 4px; 
 }
 
 .firstContents .to-select1{
@@ -499,7 +518,7 @@ body {
   border-left: 7px solid #ec902e;
   position: absolute;
   top: 14px;
-  left: 298px;
+  left: 295px;
 }
 
 .firstContents .to-select2{
@@ -509,7 +528,7 @@ body {
   border-left: 7px solid #ec902e;
   position: absolute;
   top: 14px;
-  left: 313px;
+  left: 306px;
 }
 
 

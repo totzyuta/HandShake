@@ -1,0 +1,60 @@
+<link href="/css/lovemax.css" rel="stylesheet" media="all">
+<div class="page">
+  <div class="firstContents">
+    <div class="arrows-to-right">
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+    </div>
+    <div class="line-out">
+      <div class="line-in">
+        <p>
+          告白のメッセージを入力してください
+        </p>
+      </div>
+    </div>
+    <div class="image-container float-right">
+      <div class="image">
+        <div class="face-out-circle">
+          <img src="<%= @target_img %>">
+        </div>
+      </div>
+      <p>Target Name</p>
+    </div>
+
+    <div class="image-container float-left">
+      <div class="image">
+        <div class="face-out-circle">
+          <img src="<%= @target_img %>">
+        </div>
+      </div>
+      <p>Target Name</p>
+      <div class="borderCircle circle1"></div>
+      <div class="borderCircle circle2"></div>
+      <div class="circle circle3"></div>
+      <div class="circle circle4"></div>
+      <div class="circle circle5"></div>
+    </div>
+  </div>
+  <div class="secondContents">
+    <form action="/iloveyou" method="post">
+
+    <input type="hidden" name="my_id" value="<%= @my_id %>">
+    <input type="hidden" name="target_id" value="<%= @target_id %>">
+
+    <label>
+    <p>メッセージ</p>
+    <textarea type="text" class="form-control" name="handle" ></textarea>
+    </label>
+
+    <div class="buttons">
+      <div class="lapper">
+      <input class="button" type="submit" value="告白">
+      </div>
+      <div class="lapper">
+      <a href="/" class="button2">戻る</a>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
