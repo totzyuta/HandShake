@@ -168,30 +168,11 @@ body {
   left: -65px;
 }
 
-.question {
-  position: relative;
-  width: 180px;
-  top: -137px;
-  left: 136px;
-  color: #ece0d2;
-  background-color: transparent;
-}
-
-.answer {
-  position: relative;
-  width: 150px;
-  top: -66px;
-  left: 56px;
-  color: #ece0d2;
-  background-color: transparent;
-}
-
-
 /* footer */
 .footer {
   text-align: center;
   background-color: #ec902e;
-  height: 40px;
+  height: 30px;
   width: 100%;
   position: fixed;
   bottom: 0px;
@@ -201,9 +182,7 @@ body {
   width: 200px;
   height: 22px;
   border-color: white;
-  margin-left: 8px;
-  margin-right: 5px;
-  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .selection {

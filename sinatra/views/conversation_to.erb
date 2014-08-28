@@ -51,18 +51,6 @@
         <input type="submit" value="答える" class="button">
       </form>
   </div>
-  <!-- 告白された側：質問フォーム -->
-  <div class="footer">
-    <form action="/question" method="post">
-      <input type="hidden" name="approach_id" value="<%= @approach[0] %>">
-      <select name="question_id" class="selection">
-      <% @questions.each do |q| %>
-        <option value="<%= q[0] %>"><%= q[1].force_encoding("utf-8") %></option>
-      <% end %>
-      </select>
-      <input type="submit" value="質問する" class="button">
-    </form>
-  </div>
 
   <div class="conversation">
   </div>
