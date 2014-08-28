@@ -50,7 +50,7 @@ get '/mypage' do
   user = userget(session['uid'])
   @my_img = user[4]
   target = gettarget(user[0])
-  tmpl = 'style="border: dotted 2px #fff; background-color: #ec902e;"'
+  tmpl = 'style="border: dashed 2px #fff; background-color: #ec902e;"'
   begin
     #告白してる
     @target = userget(target[2])
