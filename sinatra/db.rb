@@ -135,7 +135,7 @@ def conversationget(approach_id)
   rs = $db.query sql
   result = []
   rs.each{|col|
-    reslut << col#.join("\t")
+    result << col#.join("\t")
   }
-  return reslut
+  return result
 end
