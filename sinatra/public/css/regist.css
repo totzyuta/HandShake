@@ -32,10 +32,17 @@
   font-weight: 200;
 }
 
-.firstContents .image {
+.firstContents .image-container {
   position: absolute;
-  top: 30px;
-  left: 112px;
+  width: 100%;
+  text-align: center;
+}
+
+.firstContents .image {
+  display: table;
+  margin-top: 65px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .firstContents .face-out-circle {
@@ -72,7 +79,7 @@
   border-collapse: separate;
   border-spacing: 15px 0;
   vertical-align: middle;
-  height: 40px;
+  height: 50px;
 }
 
 
@@ -88,9 +95,9 @@
   font-size: 18px;
 
   width: 120px;
-  height: 40px;
+  height: 50px;
 
-  padding-top: 8px;
+  padding-top: 12px;
   padding-bottom: 10px;
   border: solid;
   border-width: 1px;
@@ -107,10 +114,10 @@
   font-size: 18px;
 
   width: 70px;
-  height: 38px;
+  height: 44px;
 
   background-color: #ef932e;
-  padding-top: 6px;
+  padding-top: 9px;
   margin-top: 0px;
 
   border: solid;
@@ -123,10 +130,7 @@
 
 
 .image {
-  display: table;
-  margin-top: 38px;
-  margin-right: auto;
-  margin-left: auto;
+
 }
 
 .secondContents h3 {

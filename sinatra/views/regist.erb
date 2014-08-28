@@ -1,16 +1,16 @@
 <link href="/css/regist.css" rel="stylesheet" media="all">
 <section class="registeringPage">
 <div class="firstContents">
-  <div class="image">
-    <div class="face-out-circle">
-      <img src="<%= @regist_img %>">
+  <div class="image-container">
+    <div class="image">
+      <div class="face-out-circle">
+        <img src="<%= @regist_img %>">
+      </div>
     </div>
   </div>
   <div class="profile">
-  <form action="/useradd" method="post">
     <div class="name"><%= @regist_name %></div>
     <div class="email"><%= @regist_email %></div>
-  </form>
   </div>
 </div>
 
