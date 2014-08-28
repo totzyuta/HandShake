@@ -299,14 +299,14 @@
 .secondContents .circle1 {
   height: 15px;
   width: 15px;
-  top: 478px;
+  top: 468px;
   left: 92px;
 }
 
 .secondContents .circle2 {
   height: 20px;
   width: 20px;
-  top: 464px;
+  top: 458px;
   left: 113px;
 }
 
@@ -346,8 +346,8 @@
 }
 
 .secondContents .circle8 {
-  height: 60px;
-  width: 60px;
+  height: 58px;
+  width: 58px;
   top: 309px;
   left: 211px;
 }
@@ -360,7 +360,7 @@
   margin-bottom: 20px;
   position: absolute;
   left: -10px;
-  top: 455px;
+  top: 440px;
 }
 
 .secondContents .face-out-circle {
@@ -394,7 +394,7 @@
   border-bottom: 7px solid #ec902e;
   border-left: 7px solid #ec902e;
   position: absolute;
-  top: 527px;
+  top: 512px;
   left: 85px;
 }
 
@@ -406,7 +406,7 @@
   border-left: 7px solid white;
   z-index: 5;
   position: absolute;
-  top: 528px;
+  top: 513px;
   left: 83px;
   background-color: none;
 }
@@ -416,8 +416,8 @@
   border-top: 2px solid #ec902e;
   float: left;
   position: absolute;
-  top: 540px;
-  left: 98px;
+  top: 525px;
+  left: 97px;
 }
 
 .secondContents p {
@@ -425,7 +425,7 @@
   font-size: 30px;
   color: #ef932e;
   position: absolute;
-  bottom: 5px;
+  top: 425px;
   right: 10px;
 }
 
