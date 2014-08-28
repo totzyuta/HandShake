@@ -32,10 +32,17 @@
   font-weight: 200;
 }
 
-.firstContents .image {
+.firstContents .image-container {
   position: absolute;
-  top: 30px;
-  left: 112px;
+  width: 100%;
+  text-align: center;
+}
+
+.firstContents .image {
+  display: table;
+  margin-top: 65px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .firstContents .face-out-circle {
@@ -123,10 +130,7 @@
 
 
 .image {
-  display: table;
-  margin-top: 38px;
-  margin-right: auto;
-  margin-left: auto;
+
 }
 
 .secondContents h3 {
