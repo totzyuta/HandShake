@@ -147,6 +147,16 @@ end
 
 #恋愛度MAX，最後の告白
 get '/lovemax' do
+  my_id = session[:uid]
+  @user = userget(my_id)
+  approach = gettarget(my_id)
+  @target = userget(approach[2])
+  @target_name = @target[1]
+  @target_img = @target[4]
+  @user_name = @user[1]
+  @user_img =@user[4]
+  @approach_id = approach[0]
+
   erb :lovemax
 end
 
@@ -175,6 +185,14 @@ post '/iloveyou' do
   point = @params[:point]
   manifest = @params[:manifest]
   iloveyou(my_id, target_id, handle, point, manifest)
+  redirect '/mypage'
+end
+
+#I love You Final
+post '/iloveyoufinal' do
+  approach_id = @params[:approach_id]
+  main = @params[:main]
+  iloveyoufinal(approach_id, main)
   redirect '/mypage'
 end
 
