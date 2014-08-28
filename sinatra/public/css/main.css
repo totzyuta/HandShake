@@ -475,6 +475,16 @@ body {
   background-color: #9e9;
 }
 
+.select .face-out-circle {
+  float: left;
+}
+
+.select .face-out-circle img{
+  width: 80px;
+  float: left;
+}
+
+
 .love {
   height: 130px;
   background-color: #ddd;
