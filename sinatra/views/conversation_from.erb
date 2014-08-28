@@ -2,12 +2,13 @@
 <div class="page">
   <div class="titleBar">
     <h3>Questions</h3>
-    <p>You&nbsp;<span class="small">&#x25B6;&#x25B6;</span>&nbsp;Natsuki<p>
-    <div class="line"></div>
+    <p>You&nbsp;<span class="small">&#x25B6;&#x25B6;</span>&nbsp;Secret<p>
+    <!-- <div class="line"></div> -->
   </div>
 
+  <% @conversations.each do |conv| %>
   <div class="conversation">
-    <h4>Question1.</h4>
+    <h4>Question.</h4>
     <div class="wrapper">
       <div class="image">
         <div class="targetimg">
@@ -26,12 +27,14 @@
         </div>
       </div>
 
-      <% @conversations.each do |conv| %>
       <div class="question">
         <span><%= conv[1].force_encoding("utf-8") %></span>
       </div>
       <% if conv[4] == nil %>
         <% answer = 1 %>
+      <div class="answer">
+        <span></span>
+      </div>
       <% else %>
       <div class="answer">
         <span><%= conv[4].force_encoding("utf-8") %></span>
@@ -39,22 +42,14 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 
-    <!-- 3回質問したら聞かない -->
+  <!-- 3回質問したら聞かない -->
 
-  <!-- 告白した側：解答フォーム -->
-  <div class="footer">
-      <form action="/answer" method="post">
-        <input type="hidden" name="conversation_id" value="<%= conv[0] %>">
-      <% end %>
-        <input type="text" name="answer" class="text">
-        <input type="submit" value="答える" class="button">
-      </form>
-  </div>
   <!-- 告白された側：質問フォーム -->
   <div class="footer">
     <form action="/question" method="post">
-      <input type="hidden" name="approach_id" value="<%= @approach[0] %>">
+      <input type="hidden" name="approach_id" value="<%= @approach_id %>">
       <select name="question_id" class="selection">
       <% @questions.each do |q| %>
         <option value="<%= q[0] %>"><%= q[1].force_encoding("utf-8") %></option>
