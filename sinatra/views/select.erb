@@ -1,0 +1,26 @@
+<link href="/css/select.css" rel="stylesheet" type="text/css">
+<div class="selectPage">
+<div class="page">
+
+  <div class="container">
+    <div class="box">
+      <div class="glass"></div>
+      <input type="name" class="form-control" id="Target" value="">
+    </div>
+    <div class="select">
+      <% @friends_ids.each do |id| %>
+      <div class="face-out-circle">
+        <a href="/love?target=<%= id[0] %>">
+          <img src="<%= id[1] %>">
+        </a>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="bar">
+    <div class="line line1"></div>
+      <h3>告白相手の名前を入力</h3>
+    <div class="line line2"></div>
+  </div>
+</div>
+</div>

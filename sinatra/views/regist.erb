@@ -1,0 +1,30 @@
+<link href="/css/regist.css" rel="stylesheet" media="all">
+<section class="regist">
+<div class="firstContents">
+  <div class="image-container">
+    <div class="image">
+      <div class="face-out-circle">
+        <img src="<%= @regist_img %>">
+      </div>
+    </div>
+  </div>
+  <div class="profile">
+    <div class="name"><%= @regist_name %></div>
+    <div class="email"><%= @regist_email %></div>
+  </div>
+</div>
+
+<div class="secondContents">
+  <div style="text-align: center;">
+    <h3>この内容で登録しますか？</h3>
+    <div class="buttons">
+      <div class="lapper">
+      <a href="/mypage" class="button">登録</a>
+      </div>
+      <div class="lapper">
+      <a href="/" class="button2">戻る</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

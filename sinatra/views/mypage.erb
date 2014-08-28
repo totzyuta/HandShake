@@ -1,0 +1,104 @@
+<LINK href="/css/mypage.css" rel="stylesheet" type="text/css">
+<section class="myPage">
+  <div class="firstContents">
+    <!-- 上画面：告白していない -->
+    <% if @target_img == "" %>
+    <a href="/select">
+      <div class="cover">
+        <div class="line-out">
+          <div class="line-in">
+            <p>
+              告白相手を選んでください
+              <div class="triangle to-select1"></div>
+              <div class="triangle to-select2"></div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <% end%>
+
+    <!-- 上画面：告白している -->
+    <p><span class="strong">3</span>Days</p>
+    <div class="borderCircle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="borderCircle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="circle circle5"></div>
+    <div class="borderCircle circle6"></div>
+    <div class="borderCircle circle7"></div>
+    <div class="circle circle8"></div>
+    <div class="image">
+      <div class="face-out-circle">
+        <% if @target_img == "" %>
+        <a href="/select">
+        <% else %>
+        <a href="/conversation/to">
+          <img src="<%= @target_img %>">
+        <% end %>
+        </a>
+      </div>
+    </div>
+    <div class="slanting"></div>
+    <div class="slanting2"></div>
+    <div class="line"></div>
+    <div class="borderCircle circle9"></div>
+    <div class="triangle"></div>
+    <div class="strong pct">
+      <p><%= @target_progress %></p>
+    </div>
+  </div>
+
+  <div class="middleContents">
+    <div class="image">
+      <div class="face-out-circle">
+        <img src="<%= @my_img %>">
+      </div>
+    </div>
+  </div>
+
+  <div class="secondContents">
+    <!-- 下画面：告白されていない -->
+    <% if @lover_img == "" %>
+    <div class="cover">
+      <div class="line-out">
+        <div class="line-in">
+          <p>
+            告白されていません
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+    <!-- 下画面：告白されている -->
+    <div class="strong pct">
+      <p><%= @lover_progress %></p>
+    </div>
+    <div class="borderCircle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="borderCircle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="borderCircle circle5"></div>
+    <div class="circle circle6"></div>
+    <div class="circle circle7"></div>
+    <div class="borderCircle circle8"></div>
+    <div class="image">
+      <div class="face-out-circle">
+        <% if @lover_img == "" %>
+        <a href="/mypage">
+        <% else %>
+        <a href="/conversation/from">
+          <img src="<%= @lover_img %>">
+        <% end %>
+      </div>
+    </div>
+    <div class="slanting"></div>
+    <div class="slanting2"></div>
+    <div class="line"></div>
+    <div class="borderCircle circle9"></div>
+    <div class="triangle"></div>
+    <p><span class="strong">12</span>Hours</p>
+
+  </div>
+</section>

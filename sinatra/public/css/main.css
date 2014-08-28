@@ -1,0 +1,280 @@
+body {
+}
+
+/*
+.container {
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+*/
+
+.logo-image {
+  margin-top: -10px;
+}
+
+.logo-text {
+  font-size: 25px;
+  color: #ec902e;
+}
+
+.page{
+  width:100%;
+  margin: 50px auto 20px;
+  border-top: 1px solid #ccc;
+}
+
+.hero{
+  padding: 5px 60px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.contents {
+  height: 100%;
+}
+
+.firstContents {
+  background-color: #ef932e;
+  height: 240px;
+}
+
+/*
+ * Top Page
+ */
+
+.hero-top{
+  height: 240px;
+  background-image: url("http://www.fukei-kabegami.com/cgi-bin/photo2/335/4839/1024-768.jpg");
+  background-size: cover;
+}
+
+.hero-top h3 {
+  color: white;
+  font-size: 18px;
+  line-height: 28px;
+  position: absolute;
+  right: 0;
+  top: 210px;
+  text-align: right;
+}
+
+.topPage .button {
+  color: #ef932e;
+  font-size: 20px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 65px;
+  margin-bottom: 83px;
+  width: 130px;
+  border: solid;
+  border-width: 1px;
+  border-color: #ef932e;
+  border-radius 10px;
+  /* for chrome, safari */
+  -webkit-border-radius: 10px;
+}
+
+.triangle {
+  margin-right: auto;
+  margin-left: auto;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top: 8px solid #ef932e;
+}
+
+.secondPage {
+  background-color: #ef932e;
+  color: white;
+}
+
+.secondPage h3 {
+  font-size: 20px;
+}
+
+.box {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.box img {
+  float: left;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+}
+
+.box p {
+  font-size: 10px;
+}
+
+.secondPage .triangle {
+  border: 6px solid transparent;
+  border-top: 6px solid white;
+}
+
+
+/*
+ * Registering Page
+ */
+
+.registeringPage .image {
+  display: table;
+  margin-top: 38px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.registeringPage .face-out-circle {
+    height: 130px;
+    width: 130px;
+    margin: 0px auto;
+    -moz-border-radius: 130;
+    -webkit-border-radius: 130px;
+    border-radius: 130;
+    border: 2px solid #ecb47b;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.firstContents img {
+  height: 100px;
+  width: 100px;
+  margin: 0px auto;
+  background-size: cover;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.forms {
+  height: 10px;
+  margin-bottom: 15px;
+  position: absolute;
+  top: 164px;
+  left: 73px;
+}
+
+.firstContents input {
+  margin-bottom: 3px;
+}
+
+.secondContents h3 {
+  margin-top: 50px;
+}
+
+.secondContents .buttons {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 15px 0;
+}
+
+.registeringPage .button {
+  color: #ef932e;
+  font-size: 18px;
+  width: 160px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: solid;
+  border-width: 1px;
+  border-color: #ef932e;
+  border-radius 15px;
+  /* for chrome, safari */
+  -webkit-border-radius: 15px;
+  display: table-cell;
+}
+
+.registeringPage .button2 {
+  color: white;
+  font-size: 18px;
+  width: 90px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: solid;
+  border-width: 1px;
+  background-color: #ef932e;
+  border-radius 15px;
+  /* for chrome, safari */
+  -webkit-border-radius: 15px;
+  display: table-cell;
+}
+
+
+
+.myface{
+  height: 80px;
+  width: 100%;
+  float: left;
+  margin: 0px auto;
+  position: relative;
+  top: -40px;
+}
+
+.target-face{
+  height: 80px;
+  /* width: 100%; */
+  float: right;
+}
+
+.lover-face{
+  height: 80px;
+  /* width: 100%; */
+  float: left;
+  position: relative;
+  top: -80px;
+}
+
+.conversation{
+  background-color: #ece0d2;
+}
+
+.question{
+  background-color: #E99;
+}
+
+.answer{
+  background-color: #9e9;
+}
+
+.select .face-out-circle {
+  float: left;
+}
+
+.select .face-out-circle img{
+  width: 80px;
+  float: left;
+}
+
+
+.love {
+  height: 130px;
+  background-color: #ddd;
+  display: block;
+}
+
+.love-target-face {
+  width: 200px;
+  margin: 0px auto;
+}
+
+.love .face-out-circle {
+  height: 130px;
+  width: 130px;
+  margin: 0px auto;
+  -moz-border-radius: 130;
+  -webkit-border-radius: 130px;
+  border-radius: 130;
+  border: 2px solid #ecb47b;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
