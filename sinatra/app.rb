@@ -105,12 +105,15 @@ end
 
 #Conversation Page
 get '/conversation/:dir' do
-  #告白してるとき
   if params[:dir] == 'to'
+    #告白してるとき
     @approach = gettarget(session['uid'])
-  #告白されてるとき from
-  else
+  elsif params[:dir] == 'from'
+    #告白されてるとき from
     @approach = getlover(session['uid'])
+  else
+    #デバッグ用id直打ち
+    @approach = getlover(params[:dir])
   end
   @approach_id = @approach[0]
   @my_id = session['uid']
@@ -124,7 +127,13 @@ get '/conversation/:dir' do
 
   #これまでのconversation
   @conversations = conversationget(@approach[0])
-  erb :conversation
+
+  if params[:dir] == 'to'
+    erb :conversation_to
+  elsif params[:dir] == 'from'
+    erb :conversation_from
+  else
+  end
 end
 
 get '/question' do
