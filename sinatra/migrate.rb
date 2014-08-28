@@ -90,9 +90,9 @@ questionadd("好きな素数は？")
 questionadd("ペットは飼ってる？")
 
 conversationadd(1,1)
-#p conversationget(1)
+p conversationget(1)
 conversationup(1,"ショートケーキの上のいちご")
-#p conversationget(1)
+p conversationget(1)
 
 #user test Data
 =begin
