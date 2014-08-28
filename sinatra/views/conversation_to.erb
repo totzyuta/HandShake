@@ -6,10 +6,13 @@
     <div class="line"></div>
   </div>
 
+  <% @conv_num = 0 %>
+  <% @answer = 0 %>
   <% @conversations.each do |conv| %>
+  <% @conv_num = @conv_num + 1 %>
   <% @cid = conv[0] %>
   <div class="conversation">
-    <h4>Question.</h4>
+    <h4>Question.<%= @conv_num %></h4>
     <div class="wrapper">
       <div class="image">
         <div class="targetimg">
@@ -32,8 +35,9 @@
         <span><%= conv[1].force_encoding("utf-8") %></span>
       </div>
       <% if conv[4] == nil %>
-        <% answer = 1 %>
+      <% @answer = 1 %>
       <% else %>
+      <% @answer = 0 %>
       <div class="answer">
         <span><%= conv[4].force_encoding("utf-8") %></span>
       </div>
@@ -42,7 +46,13 @@
   </div>
   <% end %>
 
-  <!-- 3回質問したら聞かない -->
+  <!-- 質問がまだない場合 -->
+  <% if @conv_num == 0 %>
+    <p style="color:black;">反応はまだありません．みたいなやつ</p>
+  <% end %>
+
+  <!-- 質問がなかったら解答フォームはない -->
+  <% if @answer == 1 %>
 
   <!-- 告白した側：解答フォーム -->
   <div class="footer">
@@ -52,7 +62,5 @@
       <input type="submit" value="答える" class="button">
     </form>
   </div>
-
-  <div class="conversation">
-  </div>
+  <% end %>
 </div>
