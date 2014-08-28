@@ -1,16 +1,11 @@
+<link href="/css/conversation.css" rel="stylesheet" type="text/css">
 <div class="page">
-  <h3>やりとり</h3>
-
-    <form action="/question" method="post">
-      <input type="text" name="approach_id" value="<%= @approach[0] %>">
-      <select name="question_id">
-      <% @questions.each do |q| %>
-        <option value="<%= q[0] %>"><%= q[1].force_encoding("utf-8") %></option>
-      <% end %>
-      </select>
-      <input type="submit" value="質問">
-    </form>
-
+  <div class="titleBar">
+    <h3>Questions</h3>
+    <p>You&nbsp;<span class="small">&#x25B6;&#x25B6;</span>&nbsp;Natsuki<p>
+    <div class="line"></div>
+  </div>
+    
   <div class="conversation">
     <div class=".face-out-circle">
       <img style="width: 100px; height:100px" src="<%= @target_img %>">
@@ -40,6 +35,19 @@
 
     <!-- 3回質問したら聞かない -->
 
+  </div>
+
+  <!-- Form to Ask -->
+  <div class="footer">
+    <form action="/question" method="post">
+      <input type="hidden" name="approach_id" value="<%= @approach[0] %>">
+      <select name="question_id">
+      <% @questions.each do |q| %>
+        <option value="<%= q[0] %>"><%= q[1].force_encoding("utf-8") %></option>
+      <% end %>
+      </select>
+      <input type="submit" value="質問">
+    </form>
   </div>
 
   <div class="conversation">
