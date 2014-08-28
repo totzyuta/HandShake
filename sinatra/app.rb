@@ -22,7 +22,11 @@ end
 
 #デバッグ用 session 付ける
 get '/session/:uid' do
-  session[:uid] = nil if params[:uid] == 'rm'
+  if params[:uid] == 'rm'
+    session[:uid] = nil
+    redirect '/'
+  end
+
   session[:uid] = params[:uid]
   redirect '/mypage'
 end
