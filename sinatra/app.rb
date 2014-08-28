@@ -67,6 +67,16 @@ get '/mypage' do
     i = i + 5 if target[7] == 2.to_s
     i = i + 10 if target[7] == 3.to_s
 
+    #円を破線にする
+    tmpl = 'style="border: dotted 2px #fff; background-color: #ec902e;"'
+    @target_circle1 = i >= 15 ? "" : tmpl
+    @target_circle2 = i >= 30 ? "" : tmpl
+    @target_circle3 = i >= 45 ? "" : tmpl
+    @target_circle4 = i >= 60 ? "" : tmpl
+    @target_circle5 = i >= 75 ? "" : tmpl
+    @target_circle6 = i >= 90 ? "" : tmpl
+    @target_circle7 = i >= 95 ? "" : tmpl
+    @target_circle8 = i >= 100 ? "" : tmpl
 
     @target_progress = i.to_s + '%'
   rescue
@@ -93,6 +103,18 @@ get '/mypage' do
     i = i + 5 if lover[7] == 2.to_s
     i = i + 10 if lover[7] == 3.to_s
 
+    #円を破線にする
+    tmpl = 'style="border: dotted 2px #ec902e; background-color: #fff;"'
+    @lover_circle1 = i >= 15 ? "" : tmpl
+    @lover_circle2 = i >= 30 ? "" : tmpl
+    @lover_circle3 = i >= 45 ? "" : tmpl
+    @lover_circle4 = i >= 60 ? "" : tmpl
+    @lover_circle5 = i >= 75 ? "" : tmpl
+    @lover_circle6 = i >= 90 ? "" : tmpl
+    @lover_circle7 = i >= 95 ? "" : tmpl
+    @lover_circle8 = i >= 100 ? "" : tmpl
+
+    @lover_circle_rate = i
     @lover_progress = i.to_s + '%'
   rescue
     #告白されてない

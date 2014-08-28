@@ -208,7 +208,7 @@
   border-radius: 9px;
 }
 
-a.touchstart {
+.button:active {
   color: white;
   background-color: #b75fd4;
 }
@@ -233,7 +233,7 @@ a.touchstart {
   border-radius: 8px;
 }
 
-a.touchstart {
+.button2:active {
   color: #b75fd4;
   background-color: white;
   border: 1px #b75fd4 solid;
