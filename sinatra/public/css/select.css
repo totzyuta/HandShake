@@ -7,6 +7,18 @@ body {
   margin-bottom: 65px;
 }
 
+.white, .white a {
+  color: white;
+  height: 40px;
+  width: 40px;
+  float: left;
+  margin-top: 3px;
+  margin-left: 12px;
+  margin-right: 0px;
+  color: white;
+  font-size: 30px;
+}
+
 .glass {
   height: 40px;
   width: 40px;
@@ -66,7 +78,7 @@ input[type=name]:focus {
   border-radius: 50px;
   border: 5px solid #eca052;
   position: relative;
-  top: 3%;
+  top: 5%;
   left: 5%;
 }
   
