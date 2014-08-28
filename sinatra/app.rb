@@ -65,6 +65,8 @@ get '/mypage' do
 
     #最終告白が終わっているか
     i = i + 5 if target[7] == 2.to_s
+    i = i + 10 if target[7] == 3.to_s
+
 
     @target_progress = i.to_s + '%'
   rescue
@@ -89,6 +91,7 @@ get '/mypage' do
 
     #最終告白が終わっているか
     i = i + 5 if lover[7] == 2.to_s
+    i = i + 10 if lover[7] == 3.to_s
 
     @lover_progress = i.to_s + '%'
   rescue
@@ -184,6 +187,7 @@ get '/return' do
   @user_name = @user[1]
   @user_img =@user[4]
   @approach_id = approach[0]
+  @approach_main = approach[8]
 
   erb :return
 end
@@ -216,6 +220,15 @@ post '/iloveyoufinal' do
   approach_id = @params[:approach_id]
   main = @params[:main]
   iloveyoufinal(approach_id, main)
+  redirect '/mypage'
+end
+
+#I love You Result
+post '/iloveyouresult' do
+  approach_id = @params[:approach_id]
+  response = @params[:response]
+  result = (("受ける" == @params[:judge]) ? true : false)
+  loveisok(approach_id, response, result)
   redirect '/mypage'
 end
 

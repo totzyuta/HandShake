@@ -46,6 +46,18 @@
     </div>
     <% end %>
 
+    <% if @target_progress == "100%" %>
+    <div class="cover">
+      <div class="line-out">
+        <div class="line-in">
+          <p>
+            祝・恋愛成就
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
     <!-- 上画面：告白している -->
     <p><span class="strong">3</span>Days</p>
     <div class="borderCircle circle1"></div>
@@ -132,6 +144,18 @@
     </a>
     <% end %>
 
+    <% if @lover_progress == "100%" %>
+      <div class="cover">
+        <div class="line-out">
+          <div class="line-in">
+            <p>
+              カップル成立
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
     <!-- 下画面：告白されている -->
     <div class="strong pct">
       <p><%= @lover_progress %></p>
@@ -151,7 +175,11 @@
             <img src="/images/unknown.png">
           <% else %>
           <a href="/conversation/from">
+            <% if @lover_progress == "100%" %>
+            <img src="<%= @lover_img %>">
+            <% else %>
             <img src="/images/unknown.png">
+            <% end %>
           </a>
           <% end %>
         </div>
