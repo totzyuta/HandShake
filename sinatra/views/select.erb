@@ -18,7 +18,7 @@
       <% @friends_ids.each do |id| %>
       <div class="face-out-circle">
         <a href="/love?target=<%= id[0] %>">
-          <img src="<%= id[1] %>">
+          <img src="<%= id[1] %>" alt="<%= id[2] %>">
         </a>
       </div>
       <% end %>

@@ -150,7 +150,7 @@ end
 get '/select' do
   @friends_ids = []
   friendget(session['uid']).each do |id|
-    @friends_ids << [id,userget(id)[4]]
+    @friends_ids << [id,userget(id)[4], userget(id)[1]]
   end
   erb :select
 end

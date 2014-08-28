@@ -27,8 +27,8 @@ $(function(){
       left: "-=30px",
       opacity: 0.0,
       "border-width": "1px",
-    }, 3000, "linear", sizeReset);
-  }, 3000);
+    }, 2000, "linear", sizeReset);
+  }, 2000);
   
   setInterval(function(){
     $(".anim-circle2").animate({
@@ -38,8 +38,8 @@ $(function(){
       left: "-=30px",
       opacity: 0.0,
       "border-width": "1px",
-    }, 3000, "linear", sizeReset2);
-  }, 3000);
+    }, 2000, "linear", sizeReset2);
+  }, 2000);
   
   setInterval(function(){
     var elem = $(".anim-line");
