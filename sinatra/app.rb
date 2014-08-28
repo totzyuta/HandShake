@@ -73,7 +73,6 @@ get '/conversation/:dir' do
 
   #これまでのconversation
   @conversations = conversationget(@approach[0])
-
   erb :conversation
 end
 
