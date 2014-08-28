@@ -599,6 +599,16 @@
   left: 10px;
 }
 
+.anim-circle {
+  width: 60px;
+  height: 60px;
+  -moz-border-radius: 130px;
+  -webkit-border-radius: 130px;
+  border-radius: 130px;
+  border: 10px solid white;
+  position: relative;
+}
+
 .anim-circle2 {
   width: 60px;
   height: 60px;
