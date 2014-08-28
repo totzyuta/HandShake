@@ -39,6 +39,7 @@ get '/mypage' do
   user = userget(session['uid'])
   @my_img = user[4]
   target = gettarget(user[0])
+  @target_progress = 0
   begin
     #告白してる
     @target_img = userget(target[2])[4]
@@ -49,7 +50,7 @@ get '/mypage' do
       i = i + 15;
       i = i + 15 if conv[4] != nil
     end
-    @target_progress = i.to_s
+    @target_progress = i.to_s + '%'
   rescue
     #告白してない
     @target_img = ""
@@ -71,12 +72,11 @@ get '/mypage' do
       i = i + 15;
       i = i + 15 if conv[4] != nil
     end
-    @lover_progress = i.to_s
+    @lover_progress = i.to_s + '%'
   rescue
     #告白されてない
     @lover_img = ""
   end
-
 
   #残り計算
 
