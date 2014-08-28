@@ -193,6 +193,11 @@
   border-radius: 9px;
 }
 
+.secondContents .button:active {
+  color: white;
+  background-color: #b75fd4;
+}
+
 .secondContents .button2 {
   display: block;
   color: white;
@@ -211,5 +216,11 @@
    -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
+}
+
+.secondContents .button2:active {
+  color: #b75fd4;
+  background-color: white;
+  border-color: #b75fd4;
 }
 
