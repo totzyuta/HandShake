@@ -49,7 +49,7 @@ get '/mypage' do
       i = i + 15;
       i = i + 15 if conv[4] != nil
     end
-    @target_progress = i.to_s
+    @target_progress = i.to_s + '%'
   rescue
     #告白してない
     @target_img = ""
@@ -71,12 +71,11 @@ get '/mypage' do
       i = i + 15;
       i = i + 15 if conv[4] != nil
     end
-    @lover_progress = i.to_s
+    @lover_progress = i.to_s + '%'
   rescue
     #告白されてない
     @lover_img = ""
   end
-
 
   #残り計算
 
@@ -105,12 +104,15 @@ end
 
 #Conversation Page
 get '/conversation/:dir' do
-  #告白してるとき
   if params[:dir] == 'to'
+    #告白してるとき
     @approach = gettarget(session['uid'])
-  #告白されてるとき from
-  else
+  elsif params[:dir] == 'from'
+    #告白されてるとき from
     @approach = getlover(session['uid'])
+  else
+    #デバッグ用id直打ち
+    @approach = getlover(params[:dir])
   end
   @approach_id = @approach[0]
   @my_id = session['uid']
@@ -124,7 +126,13 @@ get '/conversation/:dir' do
 
   #これまでのconversation
   @conversations = conversationget(@approach[0])
-  erb :conversation
+
+  if params[:dir] == 'to'
+    erb :conversation_to
+  elsif params[:dir] == 'from'
+    erb :conversation_from
+  else
+  end
 end
 
 get '/question' do
