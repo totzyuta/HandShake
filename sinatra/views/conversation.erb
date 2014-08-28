@@ -31,16 +31,11 @@
         <span><%= conv[1].force_encoding("utf-8") %></span>
       </div>
       <% if conv[4] == nil %>
-        <form action="/answer" method="post">
-          <input type="text" name="conversation_id" value="<%= conv[0] %>">
-          <input type="text" name="answer">
-          <input type="submit" value="答える">
-        </form>
+        <% answer = 1 %>
       <% else %>
       <div class="answer">
         <span><%= conv[4].force_encoding("utf-8") %></span>
       </div>
-      <% end %>
       <% end %>
     </div>
   </div>
@@ -48,7 +43,14 @@
     <!-- 3回質問したら聞かない -->
 
   <!-- 告白した側：解答フォーム -->
-
+  <div class="footer">
+      <form action="/answer" method="post">
+        <input type="hidden" name="conversation_id" value="<%= conv[0] %>">
+      <% end %>
+        <input type="text" name="answer" class="text">
+        <input type="submit" value="答える" class="button">
+      </form>
+  </div>
   <!-- 告白された側：質問フォーム -->
   <div class="footer">
     <form action="/question" method="post">
