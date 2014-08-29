@@ -257,9 +257,20 @@
 .middleContents .image {
   display: table;
   position: absolute;
-  top: 237px;
+  top: 235px;
   left: 110px;
   z-index: 20;
+}
+
+
+.middleContents .harf-image {
+  position: absolute;
+  top: 235px;
+  left: 110px;
+  height: 55px;
+  width: 110px;
+  overflow: hidden;
+  z-index: 21;
 }
 
 .middleContents .face-out-circle {
@@ -275,6 +286,19 @@
     text-align: center;
 }
 
+.middleContents .harf-face-out-circle {
+    height: 110px;
+    width: 110px;
+    margin: 0px auto;
+    -moz-border-radius: 130px;
+    -webkit-border-radius: 130px;
+    border-radius: 130px;
+    border: 1px solid white;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
 .middleContents img {
   height: 100px;
   width: 100px;
@@ -284,6 +308,17 @@
   -webkit-border-radius: 50px;
   border-radius: 50px;
   border: 5px solid #eca052;
+}
+
+.middleContents .harf-image img {
+  height: 100px;
+  width: 100px;
+  margin: 0px auto;
+  background-size: cover;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 5px solid white;
 }
 
 /* Second Contents from Here */
