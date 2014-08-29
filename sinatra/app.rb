@@ -172,6 +172,22 @@ get '/love' do
   erb :love
 end
 
+# 結果発表
+get '/result' do
+  my_id = session[:uid]
+  @user = userget(my_id)
+  approach = gettarget(my_id)
+  target = userget(approach[2])
+
+  @target_img = target[4]
+  @target_name = target[1]
+  @target_email = target[3]
+  @my_id = session['uid']
+  @target_id = params['target']
+
+  erb :result
+end
+
 #Conversation Page
 get '/conversation/:dir' do
   if params[:dir] == 'to'
