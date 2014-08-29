@@ -8,7 +8,6 @@ $(function(){
   }).keyup(function(){
     var word = tar.val();
     if(word != ""){
-    console.log(word);
       $(".face-out-circle").each(function(){
         $this = $(this);
         var name = $this.find("img").attr("alt");
