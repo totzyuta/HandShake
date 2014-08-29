@@ -18,8 +18,9 @@ body {
 }
 
 .box {
-  margin-top: 10px;
-  margin-bottom: 65px;
+  position: relative;
+  top: 30px;
+  height: 40px;
 }
 
 .white, .white a {
@@ -44,12 +45,12 @@ input[type=name] {
 }
 
 .selectPage .select {
+  position: relative;
   clear: both;
   width: 305px;
   height: 20px;
-  position: relative;
   left: -10px;
-  top: -10px;
+  top: 30px;
 }
 
 .selectPage .face-out-circle {
@@ -123,7 +124,8 @@ input[type=name] {
   background-color: rgba(255, 255, 255, 0.6);
   padding-top: 1px;
   padding-bottom: 1px;
-  top: 170px;
+  left: 0px;
+  top: 20px;
 }
 
 .line-in {

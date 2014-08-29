@@ -3,14 +3,18 @@
   <div class="firstContents">
     <!-- 上画面：告白していない -->
     <% if @target_img == "" %>
+
     <a href="/select">
+    <div class="anim-line"></div>
       <div class="cover">
         <div class="line-out">
           <div class="line-in">
             <p>
               告白相手を選んでください
-              <div class="triangle to-select1"></div>
-              <div class="triangle to-select2"></div>
+              <div class="triangles">
+                <div class="triangle to-select1"></div>
+                <div class="triangle to-select2"></div>
+              </div>
             </p>
           </div>
         </div>
@@ -19,6 +23,7 @@
     <% end%>
 
     <% if @target_progress == "90%" %>
+    <div class="anim-line"></div>
     <a href="/lovemax">
       <div class="cover">
         <div class="line-out">
@@ -35,6 +40,7 @@
     <% end %>
 
     <% if @target_progress == "95%" %>
+    <div class="anim-line3"></div>
     <div class="cover">
       <div class="line-out">
         <div class="line-in">
@@ -50,8 +56,8 @@
     <div class="cover">
       <div class="line-out">
         <div class="line-in">
-          <p>
-            祝・恋愛成就
+          <p class="center">
+            祝・恋愛成就！！
           </p>
         </div>
       </div>
@@ -60,22 +66,26 @@
 
     <!-- 上画面：告白している -->
     <p>
-    <% if @target_img != "" %>
-    <span class="strong">3</span>Days
-    <% end %>
     </p>
-    <div class="borderCircle circle1"></div>
-    <div class="circle circle2"></div>
-    <div class="borderCircle circle3"></div>
-    <div class="circle circle4"></div>
-    <div class="circle circle5"></div>
-    <div class="borderCircle circle6"></div>
-    <div class="borderCircle circle7"></div>
-    <div class="circle circle8"></div>
+    <div class="borderCircle circle1" <%= @target_circle1 %>></div>
+    <div class="circle circle2" <%= @target_circle2 %>></div>
+    <div class="borderCircle circle3" <%= @target_circle3 %>></div>
+    <div class="circle circle4" <%= @target_circle4 %>></div>
+    <div class="circle circle5" <%= @target_circle5 %>></div>
+    <div class="borderCircle circle6" <%= @target_circle6 %>></div>
+    <div class="borderCircle circle7" <%= @target_circle7 %>></div>
+    <div class="circle circle8" <%= @target_circle8 %>></div>
+
+    <% if @target_img != "" %>
+    <p><span class="strong">3</span>Days</p>
 
     <!-- アニメーション用 -->
-    <div class="borderCircle circle-anim1 anim-circle"></div>
-
+    <div class="anim1">
+      <div class="anim-mask1">
+        <div class="anim-circle"></div>
+      </div>
+    </div>
+    <% end %>
     <div class="image">
       <div class="mask">
         <div class="face-out-circle">
@@ -106,6 +116,14 @@
     <div class="image">
       <div class="face-out-circle">
         <img src="<%= @my_img %>">
+      </div>
+    </div>
+  </div>
+
+  <div class="middleContents">
+    <div class="harf-image">
+      <div class="harf-face-out-circle">
+        <img src="">
       </div>
     </div>
   </div>
@@ -157,7 +175,7 @@
         <div class="line-out">
           <div class="line-in">
             <p>
-              カップル成立
+              カップル成立
             </p>
           </div>
         </div>
@@ -165,17 +183,26 @@
     <% end %>
 
     <!-- 下画面：告白されている -->
+    <!-- アニメーション用 -->
+    <% if @lover_img != "" %>
+    <p class="date"><span class="strong">3</span>Days</p>
+    <div class="anim2">
+      <div class="anim-mask2">
+        <div class="anim-circle2"></div>
+      </div>
+    </div>
+    <% end %>
     <div class="strong pct">
       <p><%= @lover_progress %></p>
     </div>
-    <div class="borderCircle circle1"></div>
-    <div class="circle circle2"></div>
-    <div class="borderCircle circle3"></div>
-    <div class="circle circle4"></div>
-    <div class="borderCircle circle5"></div>
-    <div class="circle circle6"></div>
-    <div class="circle circle7"></div>
-    <div class="borderCircle circle8"></div>
+    <div class="borderCircle circle1" <%= @lover_circle1 %>></div>
+    <div class="circle circle2" <%= @lover_circle2 %>></div>
+    <div class="borderCircle circle3" <%= @lover_circle3 %>></div>
+    <div class="circle circle4" <%= @lover_circle4 %>></div>
+    <div class="borderCircle circle5" <%= @lover_circle5 %>></div>
+    <div class="circle circle6" <%= @lover_circle6 %>></div>
+    <div class="circle circle7" <%= @lover_circle7 %>></div>
+    <div class="borderCircle circle8" <%= @lover_circle8 %>></div>
     <div class="image">
       <div class="mask">
         <div class="face-out-circle">
@@ -195,8 +222,8 @@
     <div class="slanting"></div>
     <div class="slanting2"></div>
     <div class="line"></div>
-    <p><span class="strong">12</span>Hours</p>
 
   </div>
 </section>
+<script src="/js/jquery.easing.1.3.js"></script>
 <script src="/js/mypage.js"></script>

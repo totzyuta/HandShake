@@ -54,6 +54,60 @@ db.query 'create table conversations (
   answer_at datetime)'
 
 #test user data
+names = []
+sexs = []
+images = []
+
+fp = open('users.csv')
+fp.each do |line|
+  l = line.split(',')
+  names << l[0]
+  sexs << l[1]
+  images << l[2]
+end
+
+n = 0
+names.length.times do |i|
+  #image_url = 'http://www.anime-chu-2.com/tv/special/twitter_icon/OP'+ ("%02d" % n) +'.jpg'
+  #p useradd(name,n%2,'example@mail.com',image_url)
+  useradd(names[i], sexs[i], 'example@mail.com', images[i])
+  n = n + 1
+end
+
+#test friends network
+#=begin
+n.times do |i|
+  n.times do |j|
+    #if rand(3) != 0
+      if i != j
+        friendadd(i+1,j+1)
+      end
+    #end
+  end
+end
+#=end
+
+#friendget(1).each do |i|
+#  p i
+#end
+
+#iloveyou(1,3,"","","")
+
+#Questions
+questionadd("好きな食べ物は？")
+questionadd("好きな場所は？")
+questionadd("明日世界が滅びるなら何をする？")
+questionadd("よく読む本はどんなジャンル？")
+questionadd("先週の日曜日は何をしてた？")
+questionadd("よく使うスマホアプリは？")
+questionadd("スポーツしてる？")
+questionadd("好きなジュースは？")
+questionadd("ペットは飼ってる？")
+
+#conversationadd(1,1)
+#conversationup(1,"ショートケーキの上のいちご")
+
+=begin
 names = %w(Satou Suzuki Tanaka Yamada Takahashi Itou Yamamoto Watanabe Nakamura Kobayashi Kato)
 n = 1
 names.each do |name|
