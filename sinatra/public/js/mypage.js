@@ -18,6 +18,18 @@ $(".anim-line").css({
       });
 };
 
+var sizeReset2 = function(){
+$(".anim-circle2").css({
+      width: "70px",
+      height: "70px",
+      top: "+=25px",
+      left: "+=25px",
+      opacity: 1,
+      "border-radius": "130px",
+      border: "10px solid #ec902e",
+      });
+};
+
 $(function(){
   setInterval(function(){
     $(".anim-circle").animate({
@@ -38,8 +50,8 @@ $(function(){
       left: "-=25px",
       opacity: 0.0,
       "border-width": "1px",
-    }, 2000, "linear", sizeReset2);
-  }, 2000);
+    }, 2200, "linear", sizeReset2);
+  }, 2200);
   
   setInterval(function(){
     var elem = $(".anim-line");
@@ -54,16 +66,25 @@ $(function(){
     });
   }, 1200);
   
+  setInterval(function(){
+    var elem = $(".new-circle-anim");
+    $(elem).animate({
+      opacity: 0.5,
+    }, 600, "linear", function(){
+      $(elem).animate({
+        opacity: 1
+      }, 1000);
+    });
+  }, 1600);
+  
+  setInterval(function(){
+    var elem = $(".new-circle-anim");
+    $(elem).animate({
+      opacity: 0.5,
+    }, 600, "linear", function(){
+      $(elem).animate({
+        opacity: 1
+      }, 1000);
+    });
+  }, 1600);
 });
-
-var sizeReset2 = function(){
-$(".anim-circle2").css({
-      width: "70px",
-      height: "70px",
-      top: "+=25px",
-      left: "+=25px",
-      opacity: 1,
-      "border-radius": "130px",
-      border: "10px solid #ec902e",
-      });
-};
