@@ -77,14 +77,4 @@ $(function(){
     });
   }, 1600);
   
-  setInterval(function(){
-    var elem = $(".new-circle-anim");
-    $(elem).animate({
-      opacity: 0.5,
-    }, 600, "linear", function(){
-      $(elem).animate({
-        opacity: 1
-      }, 1000);
-    });
-  }, 1600);
 });
