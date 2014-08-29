@@ -11,7 +11,7 @@
           <div class="line-in">
             <p>
               告白相手を選んでください
-              <div class="triangles">
+              <div class="triangles triangles-anim">
                 <div class="triangle to-select1"></div>
                 <div class="triangle to-select2"></div>
               </div>
@@ -71,14 +71,14 @@
     <!-- 上画面：告白している -->
     <p>
     </p>
-    <div class="borderCircle circle1" <%= @target_circle1 %>></div>
-    <div class="circle circle2" <%= @target_circle2 %>></div>
-    <div class="borderCircle circle3" <%= @target_circle3 %>></div>
-    <div class="circle circle4" <%= @target_circle4 %>></div>
-    <div class="circle circle5" <%= @target_circle5 %>></div>
-    <div class="borderCircle circle6" <%= @target_circle6 %>></div>
-    <div class="borderCircle circle7" <%= @target_circle7 %>></div>
-    <div class="circle circle8" <%= @target_circle8 %>></div>
+    <div class="borderCircle circle1 <%= @target_new_circle1 %>" <%= @target_circle1 %>></div>
+    <div class="circle circle2 <%= @target_new_circle2 %>" <%= @target_circle2 %>></div>
+    <div class="borderCircle circle3 <%= @target_new_circle3 %>" <%= @target_circle3 %>></div>
+    <div class="circle circle4 <%= @target_new_circle4 %>" <%= @target_circle4 %>></div>
+    <div class="circle circle5 <%= @target_new_circle5 %>" <%= @target_circle5 %>></div>
+    <div class="borderCircle circle6 <%= @target_new_circle6 %>" <%= @target_circle6 %>></div>
+    <div class="borderCircle circle7 <%= @target_new_circle7 %>" <%= @target_circle7 %>></div>
+    <div class="circle circle8 <%= @target_new_circle8 %>" <%= @target_circle8 %>></div>
 
     <% if @target_img != "" %>
     <p><span class="strong">3</span>Days</p>
@@ -201,14 +201,14 @@
     <div class="strong pct">
       <p><%= @lover_progress %></p>
     </div>
-    <div class="borderCircle circle1" <%= @lover_circle1 %>></div>
-    <div class="circle circle2" <%= @lover_circle2 %>></div>
-    <div class="borderCircle circle3" <%= @lover_circle3 %>></div>
-    <div class="circle circle4" <%= @lover_circle4 %>></div>
-    <div class="borderCircle circle5" <%= @lover_circle5 %>></div>
-    <div class="circle circle6" <%= @lover_circle6 %>></div>
-    <div class="circle circle7" <%= @lover_circle7 %>></div>
-    <div class="borderCircle circle8" <%= @lover_circle8 %>></div>
+    <div class="borderCircle circle1 <%= @lover_new_circle1 %>" <%= @lover_circle1 %>></div>
+    <div class="circle circle2 <%= @lover_new_circle2 %>" <%= @lover_circle2 %>></div>
+    <div class="borderCircle circle3 <%= @lover_new_circle3 %>" <%= @lover_circle3 %>></div>
+    <div class="circle circle4 <%= @lover_new_circle4 %>" <%= @lover_circle4 %>></div>
+    <div class="borderCircle circle5 <%= @lover_new_circle5 %>" <%= @lover_circle5 %>></div>
+    <div class="circle circle6 <%= @lover_new_circle6 %>" <%= @lover_circle6 %>></div>
+    <div class="circle circle7 <%= @lover_new_circle7 %>" <%= @lover_circle7 %>></div>
+    <div class="borderCircle circle8 <%= @lover_new_circle8 %>" <%= @lover_circle8 %>></div>
     <div class="image">
       <div class="mask">
         <div class="face-out-circle">
