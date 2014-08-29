@@ -30,8 +30,10 @@
           <div class="line-in">
             <p>
               本番告白に望みましょう
-              <div class="triangle to-select1"></div>
-              <div class="triangle to-select2"></div>
+              <div class="triangles">
+                <div class="triangle to-select1"></div>
+                <div class="triangle to-select2"></div>
+              </div>
             </p>
           </div>
         </div>
@@ -53,15 +55,17 @@
     <% end %>
 
     <% if @target_progress == "100%" %>
-    <div class="cover">
-      <div class="line-out">
-        <div class="line-in">
-          <p class="center">
-            祝・恋愛成就！！
-          </p>
+    <a href='/result'>
+      <div class="cover">
+        <div class="line-out">
+          <div class="line-in">
+            <p class="center">
+              告白の結果は…？
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </a>
     <% end %>
 
     <!-- 上画面：告白している -->
@@ -161,8 +165,10 @@
           <div class="line-in">
             <p>
               最後の返事をしましょう
-              <div class="triangle to-select1"></div>
-              <div class="triangle to-select2"></div>
+              <div class="triangles">
+                <div class="triangle to-select1"></div>
+                <div class="triangle to-select2"></div>
+              </div>
             </p>
           </div>
         </div>
