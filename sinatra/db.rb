@@ -39,6 +39,16 @@ def userget(id)#, colmun)
   }
 end
 
+#user id を返す
+def userlogin(name)#, colmun)
+  colmun = '*'
+  sql = 'select ' + colmun + ' from users where name = "' + name.to_s + '"'
+  rs = $db.query sql
+  rs.each{|col|
+    return col#.join("\t")
+  }
+end
+
 def friendadd(my_id, friend_id)
   sql = 'insert into friends values(' +
     my_id.to_s + ',' +

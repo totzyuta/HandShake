@@ -23,6 +23,8 @@
           <div class="slanting2"></div>
           <div class="line"></div>
         </div>
+
+
         <div class="loverimg">
           <img class="loverimg" src="<%= @lover_img %>">
           <div class="slanting"></div>
@@ -30,10 +32,10 @@
           <div class="line"></div>
         </div>
       </div>
+        <div class="question">
+          <span><%= conv[1].force_encoding("utf-8") %></span>
+        </div>
 
-      <div class="question">
-        <span><%= conv[1].force_encoding("utf-8") %></span>
-      </div>
       <% if conv[4] == nil %>
       <div class="answer">
         <span></span>
@@ -71,10 +73,12 @@
         <option value="<%= q[0] %>"><%= q[1].force_encoding("utf-8") %></option>
       <% end %>
       </select>
-      <input type="submit" value="質問する" class="button">
+      <input type="submit" value="質問" class="button form-control">
+      <div class="select-arrow"></div>
     </form>
   </div>
 
   <% end %>
 
 </div>
+<script src="/js/conversation_from.js"></script>

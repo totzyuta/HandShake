@@ -206,40 +206,68 @@ body {
 .footer {
   text-align: center;
   background-color: #ec902e;
-  height: 60px;
+  height: 70px;
   width: 100%;
   position: fixed;
   bottom: 0px;
+  padding-top: 7px;
   border-top: 2px white solid;
+}
+
+.footer form {
+  display: block;
+  width: 100%;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 15px 0;
 }
 
 .selection {
   /* for smartphone */
-  color: #ec902e;
-  background-color: #ec902e;
+  font-size: 15px;
+  appearance: none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  color: white;
+  background-color: transparent;
   width: 200px;
-  height: 40px;
+  height: 45px;
+  border: 1px solid white;
+  float: left;
+  vertical-align: middle;
+  text-align: center;
+  padding-left: 10px;
+  margin: 0px auto;
+}
 
-  border-color: white;
-  margin-top: 10px;
+.select-arrow {
+  position: relative;
+  top: -27px;
+  left: 35px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-top: 10px solid white;
 }
 
 .button {
-  color: #ec902e;
-  font-size: 14px;
   background-color: white;
-  font-size: 13px;
-  border: none;
 
   width: 70px;
-  height: 40px;
-
-  padding-top: 3px;
-  margin: 4px;
+  height: 45px;
    
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  color: #ec902e;
+  border-color: #ec902e;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 15px;
+  margin: 0px auto;
 }
 
 .line-out{
