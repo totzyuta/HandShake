@@ -20,6 +20,12 @@ get '/' do
   erb :index
 end
 
+#デモ用
+get '/u/:name' do
+  session[:uid] = userlogin(params[:name])[0]
+  redirect '/mypage'
+end
+
 #デバッグ用 session 付ける
 get '/session/:uid' do
   if params[:uid] == 'rm'
