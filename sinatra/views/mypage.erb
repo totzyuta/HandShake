@@ -64,9 +64,6 @@
 
     <!-- 上画面：告白している -->
     <p>
-    <% if @target_img != "" %>
-    <span class="strong">3</span>Days
-    <% end %>
     </p>
     <div class="borderCircle circle1" <%= @target_circle1 %>></div>
     <div class="circle circle2" <%= @target_circle2 %>></div>
@@ -77,8 +74,10 @@
     <div class="borderCircle circle7" <%= @target_circle7 %>></div>
     <div class="circle circle8" <%= @target_circle8 %>></div>
 
-    <!-- アニメーション用 -->
     <% if @target_img != "" %>
+    <p><span class="strong">3</span>Days</p>
+
+    <!-- アニメーション用 -->
     <div class="anim1">
       <div class="anim-mask1">
         <div class="anim-circle"></div>
@@ -182,9 +181,9 @@
     <% end %>
 
     <!-- 下画面：告白されている -->
-
     <!-- アニメーション用 -->
     <% if @lover_img != "" %>
+    <p class="date"><span class="strong">3</span>Days</p>
     <div class="anim2">
       <div class="anim-mask2">
         <div class="anim-circle2"></div>
@@ -221,7 +220,6 @@
     <div class="slanting"></div>
     <div class="slanting2"></div>
     <div class="line"></div>
-    <p><span class="strong">12</span>Hours</p>
 
   </div>
 </section>
