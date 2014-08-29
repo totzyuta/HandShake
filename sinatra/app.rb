@@ -16,7 +16,7 @@ enable :session
 #Top Page
 get '/' do
   #セッションがあったら/mypageに飛ばす
-  redirect '/mypage' if session['uid'] != nil
+  #redirect '/mypage' if session['uid'] != nil
   erb :index
 end
 
