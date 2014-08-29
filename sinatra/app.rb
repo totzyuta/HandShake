@@ -57,6 +57,7 @@ get '/mypage' do
   @my_img = user[4]
   target = gettarget(user[0])
   tmpl = 'style="border: dashed 1px #fff; background-color: #ec902e;"'
+  newcircle = 'new-circle-anim'
   begin
     #告白してる
     @target = userget(target[2])
@@ -84,6 +85,37 @@ get '/mypage' do
     @target_circle7 = i >= 95 ? "" : tmpl
     @target_circle8 = i >= 100 ? "" : tmpl
 
+    nw = 0
+    #新しい円の探索
+    nw = i >= 15 ? 1 : nw
+    nw = i >= 30 ? 2 : nw
+    nw = i >= 45 ? 3 : nw
+    nw = i >= 60 ? 4 : nw
+    nw = i >= 75 ? 5 : nw
+    nw = i >= 90 ? 6 : nw
+    nw = i >= 95 ? 7 : nw
+    nw = i >= 100 ? 8 : nw
+
+    case nw
+      when 1 then
+        @target_new_circle1 = newcircle
+      when 2 then
+        @target_new_circle2 = newcircle
+      when 3 then
+        @target_new_circle3 = newcircle
+      when 4 then
+        @target_new_circle4 = newcircle
+      when 5 then
+        @target_new_circle5 = newcircle                
+      when 6 then
+        @target_new_circle6 = newcircle
+      when 7 then
+        @target_new_circle7 = newcircle
+      when 8 then
+        @target_new_circle8 = newcircle
+    end
+
+
     @target_progress = i.to_s + '%'
   rescue
     #告白してない
@@ -103,6 +135,7 @@ get '/mypage' do
   #告白されている方
   lover = getlover(user[0])
   tmpl = 'style="border: dashed 1px #ec902e; background-color: #fff;"'
+  newcircle = 'new-circle-anim'
   begin
     #告白されてる
     @lover = userget(lover[1])
@@ -130,6 +163,36 @@ get '/mypage' do
     @lover_circle7 = i >= 95 ? "" : tmpl
     @lover_circle8 = i >= 100 ? "" : tmpl
 
+    new = 0
+    #新しい円の探索
+    new = i >= 15 ? 1 : new
+    new = i >= 30 ? 2 : new
+    new = i >= 45 ? 3 : new
+    new = i >= 60 ? 4 : new
+    new = i >= 75 ? 5 : new
+    new = i >= 90 ? 6 : new
+    new = i >= 95 ? 7 : new
+    new = i >= 100 ? 8 : new
+
+    case new
+      when 1 then
+        @lover_new_circle1 = newcircle
+      when 2 then
+        @lover_new_circle2 = newcircle
+      when 3 then
+        @lover_new_circle3 = newcircle
+      when 4 then
+        @lover_new_circle4 = newcircle
+      when 5 then
+        @lover_new_circle5 = newcircle                
+      when 6 then
+        @lover_new_circle6 = newcircle
+      when 7 then
+        @lover_new_circle7 = newcircle
+      when 8 then
+        @lover_new_circle8 = newcircle
+    end
+    
     @lover_circle_rate = i
     @lover_progress = i.to_s + '%'
   rescue
